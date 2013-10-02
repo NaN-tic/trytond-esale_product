@@ -434,10 +434,9 @@ msgctxt "help:sale.shop,esale_last_stocks:"
 msgid "This date is last export (filter)"
 msgstr "La fecha de la última exportación (filtro)"
 
-#, fuzzy
 msgctxt "model:esale.attribute.group,name:"
 msgid "Esale Attribute Group"
-msgstr "esale.attribute.group"
+msgstr "Atributos de grupo"
 
 msgctxt "model:esale.export.product.result,name:"
 msgid "Export Products Tryton to External Shop: Result"
