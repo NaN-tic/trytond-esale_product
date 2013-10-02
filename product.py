@@ -4,7 +4,6 @@
 from trytond.model import ModelView, ModelSQL, fields
 from trytond.wizard import Wizard, StateTransition, StateView, Button
 from trytond.pool import Pool, PoolMeta
-from trytond.pyson import Eval
 
 __all__ = ['EsaleAttributeGroup', 'Template', 'EsaleExportStart',
     'EsaleExportResult', 'EsaleExportProduct', 'EsaleExportPrice',

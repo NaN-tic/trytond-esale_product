@@ -4,10 +4,6 @@
 from trytond.model import ModelView, fields
 from trytond.transaction import Transaction
 from trytond.pool import PoolMeta
-from trytond.pyson import Eval
-
-import logging
-import threading
 
 __all__ = ['SaleShop']
 __metaclass__ = PoolMeta
