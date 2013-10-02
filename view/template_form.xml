@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- This file is part esale_product module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/notebook/page[@id=&quot;esale&quot;]/notebook/page[@id=&quot;esale-general&quot;]/field[@name=&quot;esale_sequence&quot;]"
+    position="after">
+        <label name="esale_attribute_group"/>
+        <field name="esale_attribute_group"/>
+    </xpath>
+</data>

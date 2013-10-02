@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- This file is part esale_product module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<data>
+    <xpath
+        expr="/form/notebook/page[@id='esale']/notebook/page[@id='configuration']/notebook/page[@id='general']/field[@name='esale_scheduler']"
+        position="after">
+            <label name="esale_top_menu"/>
+            <field name="esale_top_menu"/>
+    </xpath>
+    <xpath
+        expr="/form/notebook/page[@id='esale']/notebook/page[@id='actions']"
+        position="inside">
+        <page string="Catalog" id="catalog" col="6">
+            <button name="export_menus" string="Export Menus"/>
+            <label name="esale_last_menus"/>
+            <field name="esale_last_menus"/><newline/>
+            <button name="export_products" string="Export Products"/>
+            <label name="esale_last_products"/>
+            <field name="esale_last_products"/><newline/>
+            <button name="export_prices" string="Export Prices"/>
+            <label name="esale_last_prices"/>
+            <field name="esale_last_prices"/><newline/>
+            <button name="export_stocks" string="Export Stock"/>
+            <label name="esale_last_stocks"/>
+            <field name="esale_last_stocks"/><newline/>
+            <button name="export_images" string="Export Images"/>
+            <label name="esale_last_images"/>
+            <field name="esale_last_images"/><newline/>
+        </page>
+    </xpath>
+</data>

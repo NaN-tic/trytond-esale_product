@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!-- This file is part esale_product module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="template_view_form">
+            <field name="model">product.template</field>
+            <field name="inherit" ref="product.template_view_form"/>
+            <field name="name">template_form</field>
+        </record>
+
+        <!-- eSale Export Default Views - Wizard -->
+        <record model="ir.ui.view" id="esale_export_start">
+            <field name="model">esale.export.start</field>
+            <field name="type">form</field>
+            <field name="name">esale_export_start</field>
+        </record>
+        <record model="ir.ui.view" id="esale_export_result">
+            <field name="model">esale.export.result</field>
+            <field name="type">form</field>
+            <field name="name">esale_export_result</field>
+        </record>
+
+        <!-- eSale Export Product - Wizard -->
+        <record model="ir.action.wizard" id="wizard_esale_export_product">
+            <field name="name">Clone Products eSale</field>
+            <field name="wiz_name">esale.export.product</field>
+            <field name="model">product.product</field>
+        </record>
+        <record model="ir.action.keyword" id="esale_export_product_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">product.product,-1</field>
+            <field name="action" ref="wizard_esale_export_product"/>
+        </record>
+        <!-- eSale Export Prices - Wizard -->
+        <record model="ir.action.wizard" id="wizard_esale_export_price">
+            <field name="name">Clone Prices eSale</field>
+            <field name="wiz_name">esale.export.price</field>
+            <field name="model">product.product</field>
+        </record>
+        <record model="ir.action.keyword" id="esale_export_price_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">product.product,-1</field>
+            <field name="action" ref="wizard_esale_export_price"/>
+        </record>
+        <!-- eSale Export Stock - Wizard -->
+        <record model="ir.action.wizard" id="wizard_esale_export_stock">
+            <field name="name">Clone Stock eSale</field>
+            <field name="wiz_name">esale.export.stock</field>
+            <field name="model">product.product</field>
+        </record>
+        <record model="ir.action.keyword" id="esale_export_stock_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">product.product,-1</field>
+            <field name="action" ref="wizard_esale_export_stock"/>
+        </record>
+        <!-- eSale Export Images - Wizard -->
+        <record model="ir.action.wizard" id="wizard_esale_export_image">
+            <field name="name">Clone Images eSale</field>
+            <field name="wiz_name">esale.export.image</field>
+            <field name="model">product.product</field>
+        </record>
+        <record model="ir.action.keyword" id="esale_export_image_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">product.product,-1</field>
+            <field name="action" ref="wizard_esale_export_image"/>
+        </record>
+
+        <!--eSale Attribute Group -->
+        <record model="ir.model.access" id="access_esale_attribute_group">
+            <field name="model" search="[('model', '=', 'esale.attribute.group')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+    </data>
+</tryton>

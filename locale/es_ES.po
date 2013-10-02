@@ -1,0 +1,663 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:esale.menu:"
+msgid "Slug %s exists. Get another slug!"
+msgstr "Slug %s existe. Escoja otro slug"
+
+msgctxt "error:esale.menu:"
+msgid "Slug field is empty!"
+msgstr "Se requiere el campo Slug"
+
+msgctxt "error:esale.menu:"
+msgid "You can not create recursive menus!"
+msgstr "No puede crear un menú recursivo."
+
+msgctxt "error:esale.menu:"
+msgid "You need complete slug field!"
+msgstr "Rellene el campo slug"
+
+msgctxt "error:product.template:"
+msgid "Slug %s exists. Get another slug!"
+msgstr "Slug %s existe. Escoja otro slug"
+
+msgctxt "error:product.template:"
+msgid "Slug field is empty!"
+msgstr "Se requiere el campo Slug"
+
+msgctxt "error:product.template:"
+msgid "You need complete slug field!"
+msgstr "Rellene el campo slug"
+
+msgctxt "field:esale.attribute.group,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:esale.attribute.group,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:esale.attribute.group,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:esale.attribute.group,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:esale.attribute.group,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:esale.attribute.group,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:esale.attribute.group,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:esale.attribute.group,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:esale.export.product.result,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:esale.export.product.result,info:"
+msgid "Info"
+msgstr "Info"
+
+msgctxt "field:esale.export.product.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:esale.export.product.start,shop:"
+msgid "Shop"
+msgstr "Tienda"
+
+msgctxt "field:esale.export.result,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:esale.export.result,info:"
+msgid "Info"
+msgstr "Info"
+
+msgctxt "field:esale.export.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:esale.export.start,shop:"
+msgid "Shop"
+msgstr "Tienda"
+
+msgctxt "field:esale.menu,childs:"
+msgid "Children"
+msgstr "Hijos"
+
+msgctxt "field:esale.menu,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:esale.menu,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:esale.menu,default_sort_by:"
+msgid "Default Product Listing Sort (Sort By)"
+msgstr "Listado de productos por defecto"
+
+msgctxt "field:esale.menu,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:esale.menu,fslug:"
+msgid "Complete Slug"
+msgstr "Slug completo"
+
+msgctxt "field:esale.menu,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:esale.menu,metadescription:"
+msgid "MetaDescription"
+msgstr "MetaDescription"
+
+msgctxt "field:esale.menu,metakeyword:"
+msgid "MetaKeyword"
+msgstr "MetaKeyword"
+
+msgctxt "field:esale.menu,metatitle:"
+msgid "MetaTitle"
+msgstr "MetaTitle"
+
+msgctxt "field:esale.menu,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:esale.menu,parent:"
+msgid "Parent"
+msgstr "Padre"
+
+msgctxt "field:esale.menu,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:esale.menu,slug:"
+msgid "Slug"
+msgstr "Slug"
+
+msgctxt "field:esale.menu,status:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:esale.menu,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:esale.menu,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:product.template,esale_attribute_group:"
+msgid "Attribute"
+msgstr "Atributo"
+
+msgctxt "field:product.template,esale_available:"
+msgid "Available eSale"
+msgstr "Disponible eSale"
+
+msgctxt "field:product.template,esale_description:"
+msgid "Sale Description"
+msgstr "Descripción venta"
+
+msgctxt "field:product.template,esale_metadescription:"
+msgid "Meta Description"
+msgstr "Meta Description"
+
+msgctxt "field:product.template,esale_metakeyword:"
+msgid "Meta Keyword"
+msgstr "Meta Keyword"
+
+msgctxt "field:product.template,esale_metatitle:"
+msgid "Meta Title"
+msgstr "Meta Title"
+
+msgctxt "field:product.template,esale_product_crosssells:"
+msgid "Cross Sells"
+msgstr "Ventas cruzadas"
+
+msgctxt "field:product.template,esale_product_relateds:"
+msgid "Relateds"
+msgstr "Relacionados"
+
+msgctxt "field:product.template,esale_product_upsells:"
+msgid "Up Sells"
+msgstr "Ventas sugeridas"
+
+msgctxt "field:product.template,esale_saleshops:"
+msgid "Websites"
+msgstr "Tiendas"
+
+msgctxt "field:product.template,esale_sequence:"
+msgid "Sequence"
+msgstr "Secuencia"
+
+msgctxt "field:product.template,esale_shortdescription:"
+msgid "Short Description"
+msgstr "Descripción corta"
+
+msgctxt "field:product.template,esale_slug:"
+msgid "Slug"
+msgstr "Slug"
+
+msgctxt "field:product.template,esale_visibility:"
+msgid "Visibility"
+msgstr "Visibilidad"
+
+msgctxt "field:product.template-product.crosssell,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:product.template-product.crosssell,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:product.template-product.crosssell,crosssell:"
+msgid "Cross Sell"
+msgstr "Ventas cruzadas"
+
+msgctxt "field:product.template-product.crosssell,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:product.template-product.crosssell,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:product.template-product.crosssell,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:product.template-product.crosssell,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:product.template-product.crosssell,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:product.template-product.related,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:product.template-product.related,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:product.template-product.related,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:product.template-product.related,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:product.template-product.related,related:"
+msgid "Related"
+msgstr "Relacionados"
+
+msgctxt "field:product.template-product.related,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:product.template-product.related,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:product.template-product.related,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:product.template-product.upsell,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:product.template-product.upsell,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:product.template-product.upsell,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:product.template-product.upsell,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:product.template-product.upsell,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:product.template-product.upsell,upsell:"
+msgid "Upsell"
+msgstr "Ventas sugeridas"
+
+msgctxt "field:product.template-product.upsell,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:product.template-product.upsell,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:product.template-sale.shop,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:product.template-sale.shop,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:product.template-sale.shop,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:product.template-sale.shop,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:product.template-sale.shop,shop:"
+msgid "Shop"
+msgstr "Tienda"
+
+msgctxt "field:product.template-sale.shop,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:product.template-sale.shop,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:product.template-sale.shop,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:sale.shop,esale_last_images:"
+msgid "Last Images"
+msgstr "Últimas imágenes"
+
+msgctxt "field:sale.shop,esale_last_menus:"
+msgid "Last Menus"
+msgstr "Últimos menús"
+
+msgctxt "field:sale.shop,esale_last_prices:"
+msgid "Last Prices"
+msgstr "Últimos precios"
+
+msgctxt "field:sale.shop,esale_last_products:"
+msgid "Last Products"
+msgstr "Últimos productos"
+
+msgctxt "field:sale.shop,esale_last_stocks:"
+msgid "Last Stocks"
+msgstr "Últimos stocs"
+
+msgctxt "field:sale.shop,esale_top_menu:"
+msgid "Top Menu"
+msgstr "Top menú"
+
+msgctxt "help:esale.export.product.start,shop:"
+msgid "Select shop will be clone this product."
+msgstr "Selecciona la tienda a clonar este producto."
+
+msgctxt "help:esale.export.start,shop:"
+msgid "Select shop will be clone this product."
+msgstr "Selecciona la tienda a clonar este producto."
+
+msgctxt "help:esale.menu,status:"
+msgid "If check this, this product can shop it"
+msgstr "Si lo marca este producto podrá ser comprado"
+
+msgctxt "help:product.template,esale_available:"
+msgid ""
+"This product are available in your eSale. If you need not publish this "
+"product (despublish), unmark Active field in eSale section."
+msgstr ""
+"Este producto estará disponible en su tienda esale. Si necesita "
+"despublicarlo desactive la opción activo de la pestaña eSale."
+
+msgctxt "help:product.template,esale_metadescription:"
+msgid ""
+"Almost all search engines recommend it to be shorter than 155 characters of "
+"plain text"
+msgstr "La mayoria de buscadores recomiendan no más de 155 carácteres."
+
+msgctxt "help:product.template,esale_saleshops:"
+msgid "Select stores will be available this product."
+msgstr "Selecccione las tiendas para que este prodcuto esté disponible"
+
+msgctxt "help:product.template,esale_sequence:"
+msgid "Gives the sequence order when displaying category list."
+msgstr ""
+"Escoja la secuencia de ordenación en que se mostrará el los listados de "
+"categoría"
+
+msgctxt "help:sale.shop,esale_last_images:"
+msgid "This date is last export (filter)"
+msgstr "La fecha de la última exportación (filtro)"
+
+msgctxt "help:sale.shop,esale_last_menus:"
+msgid "This date is last export (filter)"
+msgstr "La fecha de la última exportación (filtro)"
+
+msgctxt "help:sale.shop,esale_last_prices:"
+msgid "This date is last export (filter)"
+msgstr "La fecha de la última exportación (filtro)"
+
+msgctxt "help:sale.shop,esale_last_products:"
+msgid "This date is last export (filter)"
+msgstr "La fecha de la última exportación (filtro)"
+
+msgctxt "help:sale.shop,esale_last_stocks:"
+msgid "This date is last export (filter)"
+msgstr "La fecha de la última exportación (filtro)"
+
+msgctxt "model:esale.attribute.group,name:"
+msgid "esale.attribute.group"
+msgstr "esale.attribute.group"
+
+msgctxt "model:esale.export.product.result,name:"
+msgid "Export Products Tryton to External Shop: Result"
+msgstr "Exportar productos de Tryton a tienda externa: Resultado"
+
+msgctxt "model:esale.export.product.start,name:"
+msgid "Export Products Tryton to External Shop: Start"
+msgstr "Exportar productos de Tryton a tienda externa: Start"
+
+msgctxt "model:esale.export.result,name:"
+msgid "Export Tryton to External Shop: Result"
+msgstr "Exportar de Tryton a tienda externa: resultado"
+
+msgctxt "model:esale.export.start,name:"
+msgid "Export Tryton to External Shop: Start"
+msgstr "Exportar Tryton a tienda externa: Inicio"
+
+msgctxt "model:esale.menu,name:"
+msgid "eSale Menu"
+msgstr "Menú eSale"
+
+msgctxt "model:ir.action,name:act_menu_list"
+msgid "Menus"
+msgstr "Menús"
+
+msgctxt "model:ir.action,name:act_menu_tree"
+msgid "Menus"
+msgstr "Menús"
+
+msgctxt "model:ir.action,name:wizard_esale_export_image"
+msgid "Clone Images eSale"
+msgstr "Clonar imágenes eSale"
+
+msgctxt "model:ir.action,name:wizard_esale_export_price"
+msgid "Clone Prices eSale"
+msgstr "Clonar precios eSale"
+
+msgctxt "model:ir.action,name:wizard_esale_export_product"
+msgid "Clone Products eSale"
+msgstr "Clonar productos eSale"
+
+msgctxt "model:ir.action,name:wizard_esale_export_stock"
+msgid "Clone Stock eSale"
+msgstr "Clonar stock eSale"
+
+msgctxt "model:ir.ui.menu,name:menu_menu_list"
+msgid "Menus"
+msgstr "Menús"
+
+msgctxt "model:ir.ui.menu,name:menu_menu_tree"
+msgid "Menus"
+msgstr "Menús"
+
+msgctxt "model:product.template-product.crosssell,name:"
+msgid "Product - Related"
+msgstr "Producto - Relacionado"
+
+msgctxt "model:product.template-product.related,name:"
+msgid "Product - Related"
+msgstr "Producto - Relacionado"
+
+msgctxt "model:product.template-product.upsell,name:"
+msgid "Product - Upsell"
+msgstr "Producto - Ventas sugeridas"
+
+msgctxt "model:product.template-sale.shop,name:"
+msgid "Product - Shop"
+msgstr "Producto - Tienda"
+
+msgctxt "selection:esale.menu,default_sort_by:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "selection:esale.menu,default_sort_by:"
+msgid "Position"
+msgstr "Posición"
+
+msgctxt "selection:esale.menu,default_sort_by:"
+msgid "Price"
+msgstr "Precio"
+
+msgctxt "selection:product.template,esale_visibility:"
+msgid "All"
+msgstr "Todo"
+
+msgctxt "selection:product.template,esale_visibility:"
+msgid "Catalog"
+msgstr "Catálogo"
+
+msgctxt "selection:product.template,esale_visibility:"
+msgid "None"
+msgstr "Ninguno"
+
+msgctxt "selection:product.template,esale_visibility:"
+msgid "Search"
+msgstr "Búsqueda"
+
+msgctxt "view:esale.export.product.result:"
+msgid "Clone Products"
+msgstr "Clonar productos"
+
+msgctxt "view:esale.export.product.start:"
+msgid "Clone Products"
+msgstr "Clonar productos"
+
+msgctxt "view:esale.export.result:"
+msgid "eSale Clone"
+msgstr "Clonar productos"
+
+msgctxt "view:esale.export.start:"
+msgid "eSale Clone"
+msgstr "Clonar eSale"
+
+msgctxt "view:esale.menu:"
+msgid "Children"
+msgstr "Hijos"
+
+msgctxt "view:esale.menu:"
+msgid "General"
+msgstr "General"
+
+msgctxt "view:esale.menu:"
+msgid "Menu"
+msgstr "Menú"
+
+msgctxt "view:esale.menu:"
+msgid "Menus"
+msgstr "Menús"
+
+msgctxt "view:product.product:"
+msgid "Cross Sells"
+msgstr "Ventas cruzadas"
+
+msgctxt "view:product.product:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "view:product.product:"
+msgid "General"
+msgstr "General"
+
+msgctxt "view:product.product:"
+msgid "Relateds"
+msgstr "Relacionados"
+
+msgctxt "view:product.product:"
+msgid "SEO"
+msgstr "SEO"
+
+msgctxt "view:product.product:"
+msgid "Up Sells"
+msgstr "Ventas sugeridas"
+
+msgctxt "view:product.product:"
+msgid "Websites"
+msgstr "Tiendas"
+
+msgctxt "view:product.product:"
+msgid "eSale"
+msgstr "eSale"
+
+msgctxt "view:sale.shop:"
+msgid "Catalog"
+msgstr "Catálogo"
+
+msgctxt "view:sale.shop:"
+msgid "Export Images"
+msgstr "Exportar imágenes"
+
+msgctxt "view:sale.shop:"
+msgid "Export Menus"
+msgstr "Exportar menús"
+
+msgctxt "view:sale.shop:"
+msgid "Export Prices"
+msgstr "Exportar precios"
+
+msgctxt "view:sale.shop:"
+msgid "Export Products"
+msgstr "Exportar productos"
+
+msgctxt "view:sale.shop:"
+msgid "Export Stock"
+msgstr "Exportar stock"
+
+msgctxt "wizard_button:esale.export.image,result,end:"
+msgid "Close"
+msgstr "Cerrar"
+
+msgctxt "wizard_button:esale.export.image,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:esale.export.image,start,export:"
+msgid "Clone"
+msgstr "Clonar"
+
+msgctxt "wizard_button:esale.export.price,result,end:"
+msgid "Close"
+msgstr "Cerrar"
+
+msgctxt "wizard_button:esale.export.price,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:esale.export.price,start,export:"
+msgid "Clone"
+msgstr "Clonar"
+
+msgctxt "wizard_button:esale.export.product,result,end:"
+msgid "Close"
+msgstr "Cerrar"
+
+msgctxt "wizard_button:esale.export.product,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:esale.export.product,start,export:"
+msgid "Clone"
+msgstr "Clonar"
+
+msgctxt "wizard_button:esale.export.stock,result,end:"
+msgid "Close"
+msgstr "Cerrar"
+
+msgctxt "wizard_button:esale.export.stock,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:esale.export.stock,start,export:"
+msgid "Clone"
+msgstr "Clonar"
