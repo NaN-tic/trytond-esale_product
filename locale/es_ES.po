@@ -30,6 +30,14 @@ msgctxt "error:product.template:"
 msgid "You need complete slug field!"
 msgstr "Rellene el campo slug"
 
+msgctxt "error:sale.shop:"
+msgid "Select a top menu in sale shop"
+msgstr "Selecciona el menú principal para esta tienda"
+
+msgctxt "error:sale.shop:"
+msgid "Threre are not stock to export"
+msgstr "No hay stock para exportar"
+
 msgctxt "field:esale.attribute.group,code:"
 msgid "Code"
 msgstr "Código"
@@ -426,8 +434,9 @@ msgctxt "help:sale.shop,esale_last_stocks:"
 msgid "This date is last export (filter)"
 msgstr "La fecha de la última exportación (filtro)"
 
+#, fuzzy
 msgctxt "model:esale.attribute.group,name:"
-msgid "esale.attribute.group"
+msgid "Esale Attribute Group"
 msgstr "esale.attribute.group"
 
 msgctxt "model:esale.export.product.result,name:"
@@ -450,14 +459,6 @@ msgctxt "model:esale.menu,name:"
 msgid "eSale Menu"
 msgstr "Menú eSale"
 
-msgctxt "model:ir.action,name:act_menu_list"
-msgid "Menus"
-msgstr "Menús"
-
-msgctxt "model:ir.action,name:act_menu_tree"
-msgid "Menus"
-msgstr "Menús"
-
 msgctxt "model:ir.action,name:wizard_esale_export_image"
 msgid "Clone Images eSale"
 msgstr "Clonar imágenes eSale"
@@ -473,14 +474,6 @@ msgstr "Clonar productos eSale"
 msgctxt "model:ir.action,name:wizard_esale_export_stock"
 msgid "Clone Stock eSale"
 msgstr "Clonar stock eSale"
-
-msgctxt "model:ir.ui.menu,name:menu_menu_list"
-msgid "Menus"
-msgstr "Menús"
-
-msgctxt "model:ir.ui.menu,name:menu_menu_tree"
-msgid "Menus"
-msgstr "Menús"
 
 msgctxt "model:product.template-product.crosssell,name:"
 msgid "Product - Related"
