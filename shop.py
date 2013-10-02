@@ -25,16 +25,14 @@ class SaleShop:
         help='This date is last export (filter)')
     esale_last_menus = fields.DateTime('Last Menus', 
         help='This date is last export (filter)')
-    esale_top_menu = fields.Many2One('esale.catalog.menu', 'Top Menu',
-        states={
-            'required': Eval('esale_available', True),
-        })
+    esale_top_menu = fields.Many2One('esale.catalog.menu', 'Top Menu')
 
     @classmethod
     def __setup__(cls):
         super(SaleShop, cls).__setup__()
         cls._error_messages.update({
             'stock_not_export': 'Threre are not stock to export',
+            'menu_not_export': 'Select a top menu in sale shop',
         })
         cls._buttons.update({
                 'export_products': {},
@@ -91,6 +89,8 @@ class SaleShop:
         Export Menus to External APP
         """
         for shop in shops:
+            if not shop.esale_top_menu:
+                self.raise_user_error('menu_not_export')
             export_menus = getattr(shop, 'export_menus_%s' % shop.esale_shop_app)
             export_menus(shop)
 
