@@ -29,6 +29,11 @@ class SaleShop:
         cls._error_messages.update({
             'stock_not_export': 'Threre are not stock to export',
             'menu_not_export': 'Select a top menu in sale shop',
+            'select_date_products': 'Select a date to export products',
+            'select_date_prices': 'Select a date to export prices',
+            'select_date_stocks': 'Select a date to export stocks',
+            'select_date_images': 'Select a date to export images',
+            'select_date_menus': 'Select a date to export menus',
         })
         cls._buttons.update({
                 'export_products': {},
@@ -45,6 +50,8 @@ class SaleShop:
         Export Products to External APP
         """
         for shop in shops:
+            if not shop.esale_last_products:
+                self.raise_user_error('select_date_products')
             export_products = getattr(shop, 'export_products_%s' % shop.esale_shop_app)
             export_products(shop)
 
@@ -55,6 +62,8 @@ class SaleShop:
         Export Prices to External APP
         """
         for shop in shops:
+            if not shop.esale_last_prices:
+                self.raise_user_error('select_date_prices')
             export_prices = getattr(shop, 'export_prices_%s' % shop.esale_shop_app)
             export_prices(shop)
 
@@ -65,6 +74,8 @@ class SaleShop:
         Export Stocks to External APP
         """
         for shop in shops:
+            if not shop.esale_last_stocks:
+                self.raise_user_error('select_date_stocks')
             export_stocks = getattr(shop, 'export_stocks_%s' % shop.esale_shop_app)
             export_stocks(shop)
 
@@ -75,6 +86,8 @@ class SaleShop:
         Export Images to External APP
         """
         for shop in shops:
+            if not shop.esale_last_images:
+                self.raise_user_error('select_date_images')
             export_images = getattr(shop, 'export_images_%s' % shop.esale_shop_app)
             export_images(shop)
 
@@ -87,6 +100,8 @@ class SaleShop:
         for shop in shops:
             if not shop.esale_top_menu:
                 self.raise_user_error('menu_not_export')
+            if not shop.esale_last_menus:
+                self.raise_user_error('select_date_menus')
             export_menus = getattr(shop, 'export_menus_%s' % shop.esale_shop_app)
             export_menus(shop)
 
