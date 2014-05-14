@@ -16,7 +16,11 @@ class EsaleAttributeGroup(ModelSQL, ModelView):
     __name__ = 'esale.attribute.group'
     name = fields.Char('Name', required=True)
     code = fields.Char('Code', required=True)
+    active = fields.Boolean('Active')
 
+    @staticmethod
+    def default_active():
+        return True
 
 class Template:
     __name__ = 'product.template'
