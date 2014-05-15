@@ -35,7 +35,7 @@ class EsaleExportStart(ModelView):
             domain=[
                 ('esale_available', '=', True)
             ],
-            help='Select shop will be clone this product.')
+            help='Select shop will be export this product.')
 
     @staticmethod
     def default_shop():
@@ -59,7 +59,7 @@ class EsaleExportProduct(Wizard):
     start = StateView('esale.export.start',
         'esale_product.esale_export_start', [
             Button('Cancel', 'end', 'tryton-cancel'),
-            Button('Clone', 'export', 'tryton-ok', default=True),
+            Button('Export', 'export', 'tryton-ok', default=True),
             ])
     export = StateTransition()
     result = StateView('esale.export.result',
@@ -97,7 +97,7 @@ class EsaleExportPrice(Wizard):
     start = StateView('esale.export.start',
         'esale_product.esale_export_start', [
             Button('Cancel', 'end', 'tryton-cancel'),
-            Button('Clone', 'export', 'tryton-ok', default=True),
+            Button('Export', 'export', 'tryton-ok', default=True),
             ])
     export = StateTransition()
     result = StateView('esale.export.result',
@@ -135,7 +135,7 @@ class EsaleExportStock(Wizard):
     start = StateView('esale.export.start',
         'esale_product.esale_export_start', [
             Button('Cancel', 'end', 'tryton-cancel'),
-            Button('Clone', 'export', 'tryton-ok', default=True),
+            Button('Export', 'export', 'tryton-ok', default=True),
             ])
     export = StateTransition()
     result = StateView('esale.export.result',
@@ -173,7 +173,7 @@ class EsaleExportImage(Wizard):
     start = StateView('esale.export.start',
         'esale_product.esale_export_start', [
             Button('Cancel', 'end', 'tryton-cancel'),
-            Button('Clone', 'export', 'tryton-ok', default=True),
+            Button('Export', 'export', 'tryton-ok', default=True),
             ])
     export = StateTransition()
     result = StateView('esale.export.result',

@@ -2,33 +2,49 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "error:esale.menu:"
+msgctxt "error:esale.export.image:"
+msgid "Export product images %s IDs to %s shop"
+msgstr "Exporta imatges de productes %s IDs a la botiga %s"
+
+msgctxt "error:esale.export.price:"
+msgid "Export product prices %s IDs to %s shop"
+msgstr "Exporta preus de productes %s IDs a la botiga %s"
+
+msgctxt "error:esale.export.product:"
+msgid "Export products %s IDs to %s shop"
+msgstr "Exporta productes %s IDs a la botiga %s"
+
+msgctxt "error:esale.export.stock:"
+msgid "Export product stocks %s IDs to %s shop"
+msgstr "Exporta estoc de productes %s IDs a la botiga %s"
+
+msgctxt "error:product.template:"
 msgid "Slug %s exists. Get another slug!"
 msgstr "Slug %s existeix. Tria un altre slug"
 
-msgctxt "error:esale.menu:"
-msgid "Slug field is empty!"
-msgstr "Es requereix el camp Slug."
-
-msgctxt "error:esale.menu:"
-msgid "You can not create recursive menus!"
-msgstr "No pot crear un menú recursiu."
-
-msgctxt "error:esale.menu:"
-msgid "You need complete slug field!"
-msgstr "Ompli el camp slug"
-
-msgctxt "error:product.template:"
-msgid "Slug %s exists. Get another slug!"
-msgstr "Slug %s existeix. Tria un altre slug"
-
 msgctxt "error:product.template:"
 msgid "Slug field is empty!"
 msgstr "Es requereix el camp Slug."
 
-msgctxt "error:product.template:"
-msgid "You need complete slug field!"
-msgstr "Ompli el camp slug"
+msgctxt "error:sale.shop:"
+msgid "Select a date to export images"
+msgstr "Selecciona la data per exportar imatges"
+
+msgctxt "error:sale.shop:"
+msgid "Select a date to export menus"
+msgstr "Selecciona la data per exportar menús"
+
+msgctxt "error:sale.shop:"
+msgid "Select a date to export prices"
+msgstr "Selecciona la data per exportar preus"
+
+msgctxt "error:sale.shop:"
+msgid "Select a date to export products"
+msgstr "Selecciona la data per exportar productes"
+
+msgctxt "error:sale.shop:"
+msgid "Select a date to export stocks"
+msgstr "Selecciona la data per exportar estocs"
 
 msgctxt "error:sale.shop:"
 msgid "Select a top menu in sale shop"
@@ -37,6 +53,10 @@ msgstr "Selecciona un menú principal per la botiga"
 msgctxt "error:sale.shop:"
 msgid "Threre are not stock to export"
 msgstr "No hi ha estock per exportar"
+
+msgctxt "field:esale.attribute.group,active:"
+msgid "Active"
+msgstr "Activa"
 
 msgctxt "field:esale.attribute.group,code:"
 msgid "Code"
@@ -68,23 +88,7 @@ msgstr "Data modificació"
 
 msgctxt "field:esale.attribute.group,write_uid:"
 msgid "Write User"
-msgstr "Usuario modificación"
-
-msgctxt "field:esale.export.product.result,id:"
-msgid "ID"
-msgstr "ID"
-
-msgctxt "field:esale.export.product.result,info:"
-msgid "Info"
-msgstr "Info"
-
-msgctxt "field:esale.export.product.start,id:"
-msgid "ID"
-msgstr "ID"
-
-msgctxt "field:esale.export.product.start,shop:"
-msgid "Shop"
-msgstr "Botiga"
+msgstr "Usuari modificació"
 
 msgctxt "field:esale.export.result,id:"
 msgid "ID"
@@ -101,74 +105,6 @@ msgstr "ID"
 msgctxt "field:esale.export.start,shop:"
 msgid "Shop"
 msgstr "Botiga"
-
-msgctxt "field:esale.menu,childs:"
-msgid "Children"
-msgstr "Fills"
-
-msgctxt "field:esale.menu,create_date:"
-msgid "Create Date"
-msgstr "Data creació"
-
-msgctxt "field:esale.menu,create_uid:"
-msgid "Create User"
-msgstr "Usuari creació"
-
-msgctxt "field:esale.menu,default_sort_by:"
-msgid "Default Product Listing Sort (Sort By)"
-msgstr "Listat de productes per defecte"
-
-msgctxt "field:esale.menu,description:"
-msgid "Description"
-msgstr "Descripció"
-
-msgctxt "field:esale.menu,fslug:"
-msgid "Complete Slug"
-msgstr "Slug complet"
-
-msgctxt "field:esale.menu,id:"
-msgid "ID"
-msgstr "ID"
-
-msgctxt "field:esale.menu,metadescription:"
-msgid "MetaDescription"
-msgstr "MetaDescription"
-
-msgctxt "field:esale.menu,metakeyword:"
-msgid "MetaKeyword"
-msgstr "MetaKeyword"
-
-msgctxt "field:esale.menu,metatitle:"
-msgid "MetaTitle"
-msgstr "MetaTitle"
-
-msgctxt "field:esale.menu,name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:esale.menu,parent:"
-msgid "Parent"
-msgstr "Pare"
-
-msgctxt "field:esale.menu,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "field:esale.menu,slug:"
-msgid "Slug"
-msgstr "Slug"
-
-msgctxt "field:esale.menu,status:"
-msgid "Active"
-msgstr "Actiu"
-
-msgctxt "field:esale.menu,write_date:"
-msgid "Write Date"
-msgstr "Data modificació"
-
-msgctxt "field:esale.menu,write_uid:"
-msgid "Write User"
-msgstr "Usuari modificació"
 
 msgctxt "field:product.template,esale_attribute_group:"
 msgid "Attribute"
@@ -193,18 +129,6 @@ msgstr "Meta Keyword"
 msgctxt "field:product.template,esale_metatitle:"
 msgid "Meta Title"
 msgstr "Meta Title"
-
-msgctxt "field:product.template,esale_product_crosssells:"
-msgid "Cross Sells"
-msgstr "Vendes creuades"
-
-msgctxt "field:product.template,esale_product_relateds:"
-msgid "Relateds"
-msgstr "Relacionats"
-
-msgctxt "field:product.template,esale_product_upsells:"
-msgid "Up Sells"
-msgstr "Vendes sugerides"
 
 msgctxt "field:product.template,esale_saleshops:"
 msgid "Websites"
@@ -378,17 +302,9 @@ msgctxt "field:sale.shop,esale_top_menu:"
 msgid "Top Menu"
 msgstr "Top menú"
 
-msgctxt "help:esale.export.product.start,shop:"
-msgid "Select shop will be clone this product."
-msgstr "Selecciona botiga per clonar aquests productes."
-
 msgctxt "help:esale.export.start,shop:"
-msgid "Select shop will be clone this product."
-msgstr "Selecciona botiga per clonar aquests productes."
-
-msgctxt "help:esale.menu,status:"
-msgid "If check this, this product can shop it"
-msgstr "Si marca aquest producte podrà comprar-lo"
+msgid "Select shop will be export this product."
+msgstr "Selecciona la botiga per exportar aquests productes."
 
 msgctxt "help:product.template,esale_available:"
 msgid ""
@@ -438,14 +354,6 @@ msgctxt "model:esale.attribute.group,name:"
 msgid "Esale Attribute Group"
 msgstr "Atributs de grup"
 
-msgctxt "model:esale.export.product.result,name:"
-msgid "Export Products Tryton to External Shop: Result"
-msgstr "Exporta productes a botiga externa: resultat"
-
-msgctxt "model:esale.export.product.start,name:"
-msgid "Export Products Tryton to External Shop: Start"
-msgstr "Exporta productes a botiga externa: inici"
-
 msgctxt "model:esale.export.result,name:"
 msgid "Export Tryton to External Shop: Result"
 msgstr "Exporta Tryton a botiga externa: resultat"
@@ -454,25 +362,21 @@ msgctxt "model:esale.export.start,name:"
 msgid "Export Tryton to External Shop: Start"
 msgstr "Exporta Tryton a botiga externa: inici"
 
-msgctxt "model:esale.menu,name:"
-msgid "eSale Menu"
-msgstr "Menú eSale"
-
 msgctxt "model:ir.action,name:wizard_esale_export_image"
-msgid "Clone Images eSale"
-msgstr "Clona imatges eSale"
+msgid "Clonar imágenes eSale"
+msgstr "Exporta imatges eSale"
 
 msgctxt "model:ir.action,name:wizard_esale_export_price"
-msgid "Clone Prices eSale"
-msgstr "Clona preus eSale"
+msgid "Clonar precios eSale"
+msgstr "Exporta preus eSale"
 
 msgctxt "model:ir.action,name:wizard_esale_export_product"
-msgid "Clone Products eSale"
-msgstr "Clona productes eSale"
+msgid "Clonar productos eSale"
+msgstr "Exporta productes eSale"
 
 msgctxt "model:ir.action,name:wizard_esale_export_stock"
-msgid "Clone Stock eSale"
-msgstr "Clona estoc eSale"
+msgid "Clonar stock eSale"
+msgstr "Exporta estoc eSale"
 
 msgctxt "model:product.template-product.crosssell,name:"
 msgid "Product - Related"
@@ -490,18 +394,6 @@ msgctxt "model:product.template-sale.shop,name:"
 msgid "Product - Shop"
 msgstr "Producte - Tienda"
 
-msgctxt "selection:esale.menu,default_sort_by:"
-msgid "Name"
-msgstr "Nom"
-
-msgctxt "selection:esale.menu,default_sort_by:"
-msgid "Position"
-msgstr "Posició"
-
-msgctxt "selection:esale.menu,default_sort_by:"
-msgid "Price"
-msgstr "Preu"
-
 msgctxt "selection:product.template,esale_visibility:"
 msgid "All"
 msgstr "Tot"
@@ -518,37 +410,13 @@ msgctxt "selection:product.template,esale_visibility:"
 msgid "Search"
 msgstr "Cerca"
 
-msgctxt "view:esale.export.product.result:"
-msgid "Clone Products"
-msgstr "Clona productes"
-
-msgctxt "view:esale.export.product.start:"
-msgid "Clone Products"
-msgstr "Clona productes"
-
 msgctxt "view:esale.export.result:"
 msgid "eSale Clone"
-msgstr "Clona eSale"
+msgstr "Exporta eSale"
 
 msgctxt "view:esale.export.start:"
 msgid "eSale Clone"
-msgstr "Clona eSale"
-
-msgctxt "view:esale.menu:"
-msgid "Children"
-msgstr "Fills"
-
-msgctxt "view:esale.menu:"
-msgid "General"
-msgstr "General"
-
-msgctxt "view:esale.menu:"
-msgid "Menu"
-msgstr "Menú"
-
-msgctxt "view:esale.menu:"
-msgid "Menus"
-msgstr "Menús"
+msgstr "Exporta eSale"
 
 msgctxt "view:product.product:"
 msgid "Cross Sells"
@@ -615,8 +483,8 @@ msgid "Cancel"
 msgstr "Cancel·la"
 
 msgctxt "wizard_button:esale.export.image,start,export:"
-msgid "Clone"
-msgstr "Clona"
+msgid "Export"
+msgstr "Exporta"
 
 msgctxt "wizard_button:esale.export.price,result,end:"
 msgid "Close"
@@ -627,8 +495,8 @@ msgid "Cancel"
 msgstr "Cancel·la"
 
 msgctxt "wizard_button:esale.export.price,start,export:"
-msgid "Clone"
-msgstr "Clona"
+msgid "Export"
+msgstr "Exporta"
 
 msgctxt "wizard_button:esale.export.product,result,end:"
 msgid "Close"
@@ -639,8 +507,8 @@ msgid "Cancel"
 msgstr "Cancel·la"
 
 msgctxt "wizard_button:esale.export.product,start,export:"
-msgid "Clone"
-msgstr "Clona"
+msgid "Export"
+msgstr "Exporta"
 
 msgctxt "wizard_button:esale.export.stock,result,end:"
 msgid "Close"
@@ -651,5 +519,5 @@ msgid "Cancel"
 msgstr "Cancel·la"
 
 msgctxt "wizard_button:esale.export.stock,start,export:"
-msgid "Clone"
-msgstr "Clona"
+msgid "Export"
+msgstr "Exporta"

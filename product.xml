@@ -23,7 +23,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
 
         <!-- eSale Export Product - Wizard -->
         <record model="ir.action.wizard" id="wizard_esale_export_product">
-            <field name="name">Clone Products eSale</field>
+            <field name="name">Export Products eSale</field>
             <field name="wiz_name">esale.export.product</field>
             <field name="model">product.template</field>
         </record>
@@ -34,7 +34,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         </record>
         <!-- eSale Export Prices - Wizard -->
         <record model="ir.action.wizard" id="wizard_esale_export_price">
-            <field name="name">Clone Prices eSale</field>
+            <field name="name">Export Prices eSale</field>
             <field name="wiz_name">esale.export.price</field>
             <field name="model">product.template</field>
         </record>
@@ -45,7 +45,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         </record>
         <!-- eSale Export Stock - Wizard -->
         <record model="ir.action.wizard" id="wizard_esale_export_stock">
-            <field name="name">Clone Stock eSale</field>
+            <field name="name">Export Stock eSale</field>
             <field name="wiz_name">esale.export.stock</field>
             <field name="model">product.template</field>
         </record>
@@ -56,7 +56,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         </record>
         <!-- eSale Export Images - Wizard -->
         <record model="ir.action.wizard" id="wizard_esale_export_image">
-            <field name="name">Clone Images eSale</field>
+            <field name="name">Export Images eSale</field>
             <field name="wiz_name">esale.export.image</field>
             <field name="model">product.template</field>
         </record>
