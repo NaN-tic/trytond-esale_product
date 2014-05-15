@@ -15,8 +15,6 @@ class SaleShop:
         help='This date is last export (filter)')
     esale_last_prices = fields.DateTime('Last Prices', 
         help='This date is last export (filter)')
-    esale_last_stocks = fields.DateTime('Last Stocks', 
-        help='This date is last export (filter)')
     esale_last_images = fields.DateTime('Last Images', 
         help='This date is last export (filter)')
     esale_last_menus = fields.DateTime('Last Menus', 
@@ -31,14 +29,12 @@ class SaleShop:
             'menu_not_export': 'Select a top menu in sale shop',
             'select_date_products': 'Select a date to export products',
             'select_date_prices': 'Select a date to export prices',
-            'select_date_stocks': 'Select a date to export stocks',
             'select_date_images': 'Select a date to export images',
             'select_date_menus': 'Select a date to export menus',
         })
         cls._buttons.update({
                 'export_products': {},
                 'export_prices': {},
-                'export_stocks': {},
                 'export_images': {},
                 'export_menus': {},
                 })
@@ -66,18 +62,6 @@ class SaleShop:
                 self.raise_user_error('select_date_prices')
             export_prices = getattr(shop, 'export_prices_%s' % shop.esale_shop_app)
             export_prices(shop)
-
-    @classmethod
-    @ModelView.button
-    def export_stocks(self, shops):
-        """
-        Export Stocks to External APP
-        """
-        for shop in shops:
-            if not shop.esale_last_stocks:
-                self.raise_user_error('select_date_stocks')
-            export_stocks = getattr(shop, 'export_stocks_%s' % shop.esale_shop_app)
-            export_stocks(shop)
 
     @classmethod
     @ModelView.button

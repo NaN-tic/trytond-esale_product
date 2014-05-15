@@ -15,9 +15,6 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <button name="export_prices" string="Export Prices"/>
             <label name="esale_last_prices"/>
             <field name="esale_last_prices"/><newline/>
-            <button name="export_stocks" string="Export Stock"/>
-            <label name="esale_last_stocks"/>
-            <field name="esale_last_stocks"/><newline/>
             <button name="export_products" string="Export Products"/>
             <label name="esale_last_products"/>
             <field name="esale_last_products"/><newline/>
