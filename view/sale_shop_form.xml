@@ -12,21 +12,21 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         expr="/form/notebook/page[@id='esale']/notebook/page[@id='actions']"
         position="inside">
         <page string="Catalog" id="catalog" col="6">
-            <button name="export_menus" string="Export Menus"/>
-            <label name="esale_last_menus"/>
-            <field name="esale_last_menus"/><newline/>
-            <button name="export_products" string="Export Products"/>
-            <label name="esale_last_products"/>
-            <field name="esale_last_products"/><newline/>
             <button name="export_prices" string="Export Prices"/>
             <label name="esale_last_prices"/>
             <field name="esale_last_prices"/><newline/>
             <button name="export_stocks" string="Export Stock"/>
             <label name="esale_last_stocks"/>
             <field name="esale_last_stocks"/><newline/>
+            <button name="export_products" string="Export Products"/>
+            <label name="esale_last_products"/>
+            <field name="esale_last_products"/><newline/>
             <button name="export_images" string="Export Images"/>
             <label name="esale_last_images"/>
             <field name="esale_last_images"/><newline/>
+            <button name="export_menus" string="Export Menus"/>
+            <label name="esale_last_menus"/>
+            <field name="esale_last_menus"/><newline/>
         </page>
     </xpath>
 </data>
