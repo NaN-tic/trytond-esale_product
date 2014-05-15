@@ -4,6 +4,7 @@
 from trytond.model import ModelView, ModelSQL, fields
 from trytond.wizard import Wizard, StateTransition, StateView, Button
 from trytond.pool import Pool, PoolMeta
+from trytond.transaction import Transaction
 
 __all__ = ['EsaleAttributeGroup', 'Template', 'EsaleExportStart',
     'EsaleExportResult', 'EsaleExportProduct', 'EsaleExportPrice',
@@ -39,8 +40,8 @@ class EsaleExportStart(ModelView):
     @staticmethod
     def default_shop():
         Shop = Pool().get('sale.shop')
-        shops = Shop.search([('esale_available','=',True)], limit=1)
-        if shops:
+        shops = Shop.search([('esale_available','=',True)])
+        if len(shops) == 1:
             return shops[0].id
         else:
             return None
@@ -66,11 +67,21 @@ class EsaleExportProduct(Wizard):
             Button('Close', 'end', 'tryton-close'),
             ])
 
+    @classmethod
+    def __setup__(cls):
+        super(EsaleExportProduct, cls).__setup__()
+        cls._error_messages.update({
+                'export_info': 'Export products %s IDs to %s shop',
+                })
+
     def transition_export(self):
         shop = self.start.shop
         export_status = getattr(shop, 'export_products_%s' % shop.esale_shop_app)
-        export_status(shop)
-        self.result.info = 'TODO: Clone products in %s' % shop
+        templates = Transaction().context['active_ids']
+        export_status(shop, templates)
+        self.result.info = self.raise_user_error('export_info', 
+                (','.join(str(t) for t in templates), shop.rec_name),
+                raise_exception=False)
         return 'result'
 
     def default_result(self, fields):
@@ -94,11 +105,21 @@ class EsaleExportPrice(Wizard):
             Button('Close', 'end', 'tryton-close'),
             ])
 
+    @classmethod
+    def __setup__(cls):
+        super(EsaleExportPrice, cls).__setup__()
+        cls._error_messages.update({
+                'export_info': 'Export product prices %s IDs to %s shop',
+                })
+
     def transition_export(self):
         shop = self.start.shop
         export_status = getattr(shop, 'export_prices_%s' % shop.esale_shop_app)
-        export_status(shop)
-        self.result.info = 'TODO: Clone prices in %s' % shop
+        templates = Transaction().context['active_ids']
+        export_status(shop, templates)
+        self.result.info = self.raise_user_error('export_info', 
+                (','.join(str(t) for t in templates), shop.rec_name),
+                raise_exception=False)
         return 'result'
 
     def default_result(self, fields):
@@ -122,11 +143,21 @@ class EsaleExportStock(Wizard):
             Button('Close', 'end', 'tryton-close'),
             ])
 
+    @classmethod
+    def __setup__(cls):
+        super(EsaleExportStock, cls).__setup__()
+        cls._error_messages.update({
+                'export_info': 'Export product stocks %s IDs to %s shop',
+                })
+
     def transition_export(self):
         shop = self.start.shop
         export_status = getattr(shop, 'export_stocks_%s' % shop.esale_shop_app)
-        export_status(shop)
-        self.result.info = 'TODO: Clone stock in %s' % export_status
+        templates = Transaction().context['active_ids']
+        export_status(shop, templates)
+        self.result.info = self.raise_user_error('export_info', 
+                (','.join(str(t) for t in templates), shop.rec_name),
+                raise_exception=False)
         return 'result'
 
     def default_result(self, fields):
@@ -150,11 +181,21 @@ class EsaleExportImage(Wizard):
             Button('Close', 'end', 'tryton-close'),
             ])
 
+    @classmethod
+    def __setup__(cls):
+        super(EsaleExportImage, cls).__setup__()
+        cls._error_messages.update({
+                'export_info': 'Export product images %s IDs to %s shop',
+                })
+
     def transition_export(self):
         shop = self.start.shop
         export_status = getattr(shop, 'export_images_%s' % shop.esale_shop_app)
-        export_status(shop)
-        self.result.info = 'TODO: Clone image in %s' % shop
+        templates = Transaction().context['active_ids']
+        export_status(shop, templates)
+        self.result.info = self.raise_user_error('export_info', 
+                (','.join(str(t) for t in templates), shop.rec_name),
+                raise_exception=False)
         return 'result'
 
     def default_result(self, fields):

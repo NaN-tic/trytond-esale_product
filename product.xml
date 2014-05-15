@@ -25,44 +25,44 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         <record model="ir.action.wizard" id="wizard_esale_export_product">
             <field name="name">Clone Products eSale</field>
             <field name="wiz_name">esale.export.product</field>
-            <field name="model">product.product</field>
+            <field name="model">product.template</field>
         </record>
         <record model="ir.action.keyword" id="esale_export_product_keyword">
             <field name="keyword">form_action</field>
-            <field name="model">product.product,-1</field>
+            <field name="model">product.template,-1</field>
             <field name="action" ref="wizard_esale_export_product"/>
         </record>
         <!-- eSale Export Prices - Wizard -->
         <record model="ir.action.wizard" id="wizard_esale_export_price">
             <field name="name">Clone Prices eSale</field>
             <field name="wiz_name">esale.export.price</field>
-            <field name="model">product.product</field>
+            <field name="model">product.template</field>
         </record>
         <record model="ir.action.keyword" id="esale_export_price_keyword">
             <field name="keyword">form_action</field>
-            <field name="model">product.product,-1</field>
+            <field name="model">product.template,-1</field>
             <field name="action" ref="wizard_esale_export_price"/>
         </record>
         <!-- eSale Export Stock - Wizard -->
         <record model="ir.action.wizard" id="wizard_esale_export_stock">
             <field name="name">Clone Stock eSale</field>
             <field name="wiz_name">esale.export.stock</field>
-            <field name="model">product.product</field>
+            <field name="model">product.template</field>
         </record>
         <record model="ir.action.keyword" id="esale_export_stock_keyword">
             <field name="keyword">form_action</field>
-            <field name="model">product.product,-1</field>
+            <field name="model">product.template,-1</field>
             <field name="action" ref="wizard_esale_export_stock"/>
         </record>
         <!-- eSale Export Images - Wizard -->
         <record model="ir.action.wizard" id="wizard_esale_export_image">
             <field name="name">Clone Images eSale</field>
             <field name="wiz_name">esale.export.image</field>
-            <field name="model">product.product</field>
+            <field name="model">product.template</field>
         </record>
         <record model="ir.action.keyword" id="esale_export_image_keyword">
             <field name="keyword">form_action</field>
-            <field name="model">product.product,-1</field>
+            <field name="model">product.template,-1</field>
             <field name="action" ref="wizard_esale_export_image"/>
         </record>
 
