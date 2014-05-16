@@ -27,7 +27,7 @@ msgid "Slug field is empty!"
 msgstr "Se requiere el campo Slug"
 
 msgctxt "error:sale.shop:"
-msgid ""
+msgid "Select a date to export images"
 msgstr "Selecciona una fecha para exportar imagenes"
 
 msgctxt "error:sale.shop:"
@@ -50,10 +50,6 @@ msgctxt "error:sale.shop:"
 msgid "Select a top menu in sale shop"
 msgstr "Selecciona el menú principal para esta tienda"
 
-msgctxt "error:sale.shop:"
-msgid "Threre are not stock to export"
-msgstr "No hay stock para exportar"
-
 msgctxt "field:esale.attribute.group,active:"
 msgid "Active"
 msgstr "Activo"
@@ -64,11 +60,11 @@ msgstr "Código"
 
 msgctxt "field:esale.attribute.group,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Fecha creación"
 
 msgctxt "field:esale.attribute.group,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Usuario creación"
 
 msgctxt "field:esale.attribute.group,id:"
 msgid "ID"
@@ -152,11 +148,11 @@ msgstr "Visibilidad"
 
 msgctxt "field:product.template-product.crosssell,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Fecha creación"
 
 msgctxt "field:product.template-product.crosssell,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Usuario creación"
 
 msgctxt "field:product.template-product.crosssell,crosssell:"
 msgid "Cross Sell"
@@ -188,7 +184,7 @@ msgstr "Fecha de creación"
 
 msgctxt "field:product.template-product.related,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Usuario creación"
 
 msgctxt "field:product.template-product.related,id:"
 msgid "ID"
@@ -216,11 +212,11 @@ msgstr "Usuario modificación"
 
 msgctxt "field:product.template-product.upsell,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Fecha creación"
 
 msgctxt "field:product.template-product.upsell,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Usuario creación"
 
 msgctxt "field:product.template-product.upsell,id:"
 msgid "ID"
@@ -248,11 +244,11 @@ msgstr "Usuario modificación"
 
 msgctxt "field:product.template-sale.shop,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Fecha creación"
 
 msgctxt "field:product.template-sale.shop,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Usuario creación"
 
 msgctxt "field:product.template-sale.shop,id:"
 msgid "ID"
@@ -280,7 +276,7 @@ msgstr "Usuario modificación"
 
 msgctxt "field:sale.shop,esale_last_images:"
 msgid "Last Images"
-msgstr "Últimas imágenes"
+msgstr "Últimas imagenes"
 
 msgctxt "field:sale.shop,esale_last_menus:"
 msgid "Last Menus"
@@ -363,19 +359,19 @@ msgid "Export Tryton to External Shop: Start"
 msgstr "Exportar Tryton a tienda externa: Inicio"
 
 msgctxt "model:ir.action,name:wizard_esale_export_image"
-msgid "Clonar imágenes eSale"
-msgstr "Exportar imágenes eSale"
+msgid "Export Images eSale"
+msgstr "Exportar imagenes eSale"
 
 msgctxt "model:ir.action,name:wizard_esale_export_price"
-msgid "Clonar precios eSale"
+msgid "Export Prices eSale"
 msgstr "Exportar precios eSale"
 
 msgctxt "model:ir.action,name:wizard_esale_export_product"
-msgid "Clonar productos eSale"
+msgid "Export Products eSale"
 msgstr "Exportar productos eSale"
 
 msgctxt "model:ir.action,name:wizard_esale_export_stock"
-msgid "Clonar stock eSale"
+msgid "Export Stock eSale"
 msgstr "Exportar stock eSale"
 
 msgctxt "model:product.template-product.crosssell,name:"
@@ -456,7 +452,7 @@ msgstr "Catálogo"
 
 msgctxt "view:sale.shop:"
 msgid "Export Images"
-msgstr "Exportar imágenes"
+msgstr "Exportar imagenes"
 
 msgctxt "view:sale.shop:"
 msgid "Export Menus"
@@ -469,10 +465,6 @@ msgstr "Exportar precios"
 msgctxt "view:sale.shop:"
 msgid "Export Products"
 msgstr "Exportar productos"
-
-msgctxt "view:sale.shop:"
-msgid "Export Stock"
-msgstr "Exportar stock"
 
 msgctxt "wizard_button:esale.export.image,result,end:"
 msgid "Close"

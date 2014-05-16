@@ -50,10 +50,6 @@ msgctxt "error:sale.shop:"
 msgid "Select a top menu in sale shop"
 msgstr "Selecciona un menú principal per la botiga"
 
-msgctxt "error:sale.shop:"
-msgid "Threre are not stock to export"
-msgstr "No hi ha estock per exportar"
-
 msgctxt "field:esale.attribute.group,active:"
 msgid "Active"
 msgstr "Activa"
@@ -363,19 +359,19 @@ msgid "Export Tryton to External Shop: Start"
 msgstr "Exporta Tryton a botiga externa: inici"
 
 msgctxt "model:ir.action,name:wizard_esale_export_image"
-msgid "Clonar imágenes eSale"
+msgid "Export Images eSale"
 msgstr "Exporta imatges eSale"
 
 msgctxt "model:ir.action,name:wizard_esale_export_price"
-msgid "Clonar precios eSale"
+msgid "Export Prices eSale"
 msgstr "Exporta preus eSale"
 
 msgctxt "model:ir.action,name:wizard_esale_export_product"
-msgid "Clonar productos eSale"
+msgid "Export Products eSale"
 msgstr "Exporta productes eSale"
 
 msgctxt "model:ir.action,name:wizard_esale_export_stock"
-msgid "Clonar stock eSale"
+msgid "Export Stock eSale"
 msgstr "Exporta estoc eSale"
 
 msgctxt "model:product.template-product.crosssell,name:"
@@ -469,10 +465,6 @@ msgstr "Exporta preus"
 msgctxt "view:sale.shop:"
 msgid "Export Products"
 msgstr "Exporta productes"
-
-msgctxt "view:sale.shop:"
-msgid "Export Stock"
-msgstr "Exporta stock"
 
 msgctxt "wizard_button:esale.export.image,result,end:"
 msgid "Close"
