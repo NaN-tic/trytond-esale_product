@@ -4,19 +4,19 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "error:esale.export.image:"
 msgid "Export product images %s IDs to %s shop"
-msgstr "Exportar imágenes de los productos %s IDs a la tienda %s"
+msgstr "Se ha exportado las imágenes de los productos %s IDs a la tienda %s"
 
 msgctxt "error:esale.export.price:"
 msgid "Export product prices %s IDs to %s shop"
-msgstr "Exportar precios de los productos %s IDs a la tienda %s"
+msgstr "Se ha exportado los precios de los productos %s IDs a la tienda %s"
 
 msgctxt "error:esale.export.product:"
 msgid "Export products %s IDs to %s shop"
-msgstr "Exportar los productos %s IDs a la tienda %s"
+msgstr "Se ha exportado los productos %s IDs a la tienda %s"
 
 msgctxt "error:esale.export.stock:"
 msgid "Export product stocks %s IDs to %s shop"
-msgstr "Exportar stock de los productos %s IDs a la tienda %s"
+msgstr "Se ha exportado el stock de los productos %s IDs a la tienda %s"
 
 msgctxt "error:product.template:"
 msgid "Slug %s exists. Get another slug!"
