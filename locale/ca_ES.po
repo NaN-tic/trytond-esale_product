@@ -50,6 +50,10 @@ msgctxt "error:sale.shop:"
 msgid "Select a top menu in sale shop"
 msgstr "Selecciona un menú principal per la botiga"
 
+msgctxt "error:sale.shop:"
+msgid "Threre are not stock to export"
+msgstr "No hi ha estocs a exportar"
+
 msgctxt "field:esale.attribute.group,active:"
 msgid "Active"
 msgstr "Activa"
@@ -101,6 +105,10 @@ msgstr "ID"
 msgctxt "field:esale.export.start,shop:"
 msgid "Shop"
 msgstr "Botiga"
+
+msgctxt "field:product.product,add_cart:"
+msgid "Add Cart"
+msgstr "Afegir cistella"
 
 msgctxt "field:product.template,esale_attribute_group:"
 msgid "Attribute"
@@ -301,6 +309,10 @@ msgstr "Top menú"
 msgctxt "help:esale.export.start,shop:"
 msgid "Select shop will be export this product."
 msgstr "Selecciona la botiga per exportar aquests productes."
+
+msgctxt "help:product.product,add_cart:"
+msgid "Available to add cart"
+msgstr "Disponible al afegir a la cistella"
 
 msgctxt "help:product.template,esale_available:"
 msgid ""
