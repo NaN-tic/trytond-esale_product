@@ -9,6 +9,7 @@ def register():
     Pool.register(
         EsaleAttributeGroup,
         Template,
+        Product,
         EsaleExportStart,
         EsaleExportResult,
         SaleShop,

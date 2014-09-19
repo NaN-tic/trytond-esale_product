@@ -5,8 +5,9 @@ from trytond.model import ModelView, ModelSQL, fields
 from trytond.wizard import Wizard, StateTransition, StateView, Button
 from trytond.pool import Pool, PoolMeta
 from trytond.transaction import Transaction
+from trytond.pyson import Eval
 
-__all__ = ['EsaleAttributeGroup', 'Template', 'EsaleExportStart',
+__all__ = ['EsaleAttributeGroup', 'Template', 'Product', 'EsaleExportStart',
     'EsaleExportResult', 'EsaleExportProduct', 'EsaleExportPrice',
     'EsaleExportStock', 'EsaleExportImage']
 __metaclass__ = PoolMeta
@@ -23,9 +24,22 @@ class EsaleAttributeGroup(ModelSQL, ModelView):
     def default_active():
         return True
 
+
 class Template:
     __name__ = 'product.template'
     esale_attribute_group = fields.Many2One('esale.attribute.group', 'Attribute')
+
+
+class Product:
+    __name__ = 'product.product'
+    add_cart = fields.Boolean('Add Cart', states={
+            'readonly': ~Eval('active', True),
+            }, depends=['active'],
+            help='Available to add cart')
+
+    @staticmethod
+    def default_add_cart():
+        return True
 
 
 class EsaleExportStart(ModelView):
