@@ -43,12 +43,12 @@ msgid "Select a date to export products"
 msgstr "Selecciona una fecha para exportar los productos"
 
 msgctxt "error:sale.shop:"
-msgid "Select a date to export stocks"
-msgstr "Selecciona una fecha para exportar stocks"
-
-msgctxt "error:sale.shop:"
 msgid "Select a top menu in sale shop"
 msgstr "Selecciona el menú principal para esta tienda"
+
+msgctxt "error:sale.shop:"
+msgid "Threre are not stock to export"
+msgstr "No hay stock para exportar"
 
 msgctxt "field:esale.attribute.group,active:"
 msgid "Active"
@@ -290,10 +290,6 @@ msgctxt "field:sale.shop,esale_last_products:"
 msgid "Last Products"
 msgstr "Últimos productos"
 
-msgctxt "field:sale.shop,esale_last_stocks:"
-msgid "Last Stocks"
-msgstr "Últimos stocs"
-
 msgctxt "field:sale.shop,esale_top_menu:"
 msgid "Top Menu"
 msgstr "Top menú"
@@ -339,10 +335,6 @@ msgid "This date is last export (filter)"
 msgstr "La fecha de la última exportación (filtro)"
 
 msgctxt "help:sale.shop,esale_last_products:"
-msgid "This date is last export (filter)"
-msgstr "La fecha de la última exportación (filtro)"
-
-msgctxt "help:sale.shop,esale_last_stocks:"
 msgid "This date is last export (filter)"
 msgstr "La fecha de la última exportación (filtro)"
 
