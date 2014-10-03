@@ -1,5 +1,5 @@
 #This file is part esale_product module for Tryton.
-#The COPYRIGHT file at the top level of this repository contains 
+#The COPYRIGHT file at the top level of this repository contains
 #the full copyright notices and license terms.
 from trytond.model import ModelView, fields
 from trytond.transaction import Transaction
@@ -11,13 +11,13 @@ __metaclass__ = PoolMeta
 
 class SaleShop:
     __name__ = 'sale.shop'
-    esale_last_products = fields.DateTime('Last Products', 
+    esale_last_products = fields.DateTime('Last Products',
         help='This date is last export (filter)')
-    esale_last_prices = fields.DateTime('Last Prices', 
+    esale_last_prices = fields.DateTime('Last Prices',
         help='This date is last export (filter)')
-    esale_last_images = fields.DateTime('Last Images', 
+    esale_last_images = fields.DateTime('Last Images',
         help='This date is last export (filter)')
-    esale_last_menus = fields.DateTime('Last Menus', 
+    esale_last_menus = fields.DateTime('Last Menus',
         help='This date is last export (filter)')
     esale_top_menu = fields.Many2One('esale.catalog.menu', 'Top Menu')
 
@@ -48,7 +48,8 @@ class SaleShop:
         for shop in shops:
             if not shop.esale_last_products:
                 self.raise_user_error('select_date_products')
-            export_products = getattr(shop, 'export_products_%s' % shop.esale_shop_app)
+            export_products = getattr(shop,
+                'export_products_%s' % shop.esale_shop_app)
             export_products(shop)
 
     @classmethod
@@ -60,7 +61,8 @@ class SaleShop:
         for shop in shops:
             if not shop.esale_last_prices:
                 self.raise_user_error('select_date_prices')
-            export_prices = getattr(shop, 'export_prices_%s' % shop.esale_shop_app)
+            export_prices = getattr(shop,
+                'export_prices_%s' % shop.esale_shop_app)
             export_prices(shop)
 
     @classmethod
@@ -72,7 +74,8 @@ class SaleShop:
         for shop in shops:
             if not shop.esale_last_images:
                 self.raise_user_error('select_date_images')
-            export_images = getattr(shop, 'export_images_%s' % shop.esale_shop_app)
+            export_images = getattr(shop,
+                'export_images_%s' % shop.esale_shop_app)
             export_images(shop)
 
     @classmethod
@@ -86,7 +89,8 @@ class SaleShop:
                 self.raise_user_error('menu_not_export')
             if not shop.esale_last_menus:
                 self.raise_user_error('select_date_menus')
-            export_menus = getattr(shop, 'export_menus_%s' % shop.esale_shop_app)
+            export_menus = getattr(shop,
+                'export_menus_%s' % shop.esale_shop_app)
             export_menus(shop)
 
     def export_products_tryton(self, shop):

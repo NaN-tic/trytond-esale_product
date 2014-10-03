@@ -1,5 +1,5 @@
 #This file is part esale_product module for Tryton.
-#The COPYRIGHT file at the top level of this repository contains 
+#The COPYRIGHT file at the top level of this repository contains
 #the full copyright notices and license terms.
 from trytond.model import ModelView, ModelSQL, fields
 from trytond.wizard import Wizard, StateTransition, StateView, Button
@@ -23,28 +23,31 @@ class EsaleAttributeGroup(ModelSQL, ModelView):
     def default_active():
         return True
 
+
 class Template:
     __name__ = 'product.template'
-    esale_attribute_group = fields.Many2One('esale.attribute.group', 'Attribute')
+    esale_attribute_group = fields.Many2One('esale.attribute.group',
+        'Attribute')
 
 
 class EsaleExportStart(ModelView):
     'Export Tryton to External Shop: Start'
     __name__ = 'esale.export.start'
     shop = fields.Many2One('sale.shop', 'Shop', required=True,
-            domain=[
-                ('esale_available', '=', True)
-            ],
-            help='Select shop will be export this product.')
+        domain=[
+            ('esale_available', '=', True)
+        ],
+        help='Select shop will be export this product.')
 
     @staticmethod
     def default_shop():
         Shop = Pool().get('sale.shop')
-        shops = Shop.search([('esale_available','=',True)])
+        shops = Shop.search([('esale_available', '=', True)])
         if len(shops) == 1:
             return shops[0].id
         else:
             return None
+
 
 class EsaleExportResult(ModelView):
     'Export Tryton to External Shop: Result'
@@ -76,10 +79,11 @@ class EsaleExportProduct(Wizard):
 
     def transition_export(self):
         shop = self.start.shop
-        export_status = getattr(shop, 'export_products_%s' % shop.esale_shop_app)
+        export_status = getattr(shop,
+            'export_products_%s' % shop.esale_shop_app)
         templates = Transaction().context['active_ids']
         export_status(shop, templates)
-        self.result.info = self.raise_user_error('export_info', 
+        self.result.info = self.raise_user_error('export_info',
                 (','.join(str(t) for t in templates), shop.rec_name),
                 raise_exception=False)
         return 'result'
@@ -89,6 +93,7 @@ class EsaleExportProduct(Wizard):
         return {
             'info': info_,
             }
+
 
 class EsaleExportPrice(Wizard):
     """Export Prices Tryton to External Shop"""
@@ -117,7 +122,7 @@ class EsaleExportPrice(Wizard):
         export_status = getattr(shop, 'export_prices_%s' % shop.esale_shop_app)
         templates = Transaction().context['active_ids']
         export_status(shop, templates)
-        self.result.info = self.raise_user_error('export_info', 
+        self.result.info = self.raise_user_error('export_info',
                 (','.join(str(t) for t in templates), shop.rec_name),
                 raise_exception=False)
         return 'result'
@@ -127,6 +132,7 @@ class EsaleExportPrice(Wizard):
         return {
             'info': info_,
             }
+
 
 class EsaleExportStock(Wizard):
     """Export Stocks Tryton to External Shop"""
@@ -155,7 +161,7 @@ class EsaleExportStock(Wizard):
         export_status = getattr(shop, 'export_stocks_%s' % shop.esale_shop_app)
         templates = Transaction().context['active_ids']
         export_status(templates)
-        self.result.info = self.raise_user_error('export_info', 
+        self.result.info = self.raise_user_error('export_info',
                 (','.join(str(t) for t in templates), shop.rec_name),
                 raise_exception=False)
         return 'result'
@@ -165,6 +171,7 @@ class EsaleExportStock(Wizard):
         return {
             'info': info_,
             }
+
 
 class EsaleExportImage(Wizard):
     """Export Images Tryton to External Shop"""
@@ -193,7 +200,7 @@ class EsaleExportImage(Wizard):
         export_status = getattr(shop, 'export_images_%s' % shop.esale_shop_app)
         templates = Transaction().context['active_ids']
         export_status(shop, templates)
-        self.result.info = self.raise_user_error('export_info', 
+        self.result.info = self.raise_user_error('export_info',
                 (','.join(str(t) for t in templates), shop.rec_name),
                 raise_exception=False)
         return 'result'
