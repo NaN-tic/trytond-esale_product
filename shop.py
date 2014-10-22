@@ -41,16 +41,16 @@ class SaleShop:
 
     @classmethod
     @ModelView.button
-    def export_products(self, shops):
+    def export_products(cls, shops):
         """
         Export Products to External APP
         """
         for shop in shops:
             if not shop.esale_last_products:
-                self.raise_user_error('select_date_products')
+                cls.raise_user_error('select_date_products')
             export_products = getattr(shop,
                 'export_products_%s' % shop.esale_shop_app)
-            export_products(shop)
+            export_products()
 
     @classmethod
     @ModelView.button
