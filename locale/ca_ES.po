@@ -4,23 +4,23 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "error:esale.export.image:"
 msgid "Export product images %s IDs to %s shop"
-msgstr "S'ha exportat les imatges de productes %s IDs a la botiga %s"
+msgstr "S'ha exportat les imatges de productes %s IDs a la botiga %s."
 
 msgctxt "error:esale.export.price:"
 msgid "Export product prices %s IDs to %s shop"
-msgstr "S'ha exportat els preus de productes %s IDs a la botiga %s"
+msgstr "S'ha exportat els preus de productes %s IDs a la botiga %s."
 
 msgctxt "error:esale.export.product:"
 msgid "Export products %s IDs to %s shop"
-msgstr "S'ha exportat els productes %s IDs a la botiga %s"
+msgstr "S'ha exportat els productes %s IDs a la botiga %s."
 
 msgctxt "error:esale.export.stock:"
 msgid "Export product stocks %s IDs to %s shop"
-msgstr "S'ha exportat l'estoc de productes %s IDs a la botiga %s"
+msgstr "S'ha exportat l'estoc de productes %s IDs a la botiga %s."
 
 msgctxt "error:product.template:"
 msgid "Slug %s exists. Get another slug!"
-msgstr "Slug %s existeix. Tria un altre slug"
+msgstr "Slug %s existeix. Tria un altre slug."
 
 msgctxt "error:product.template:"
 msgid "Slug field is empty!"
@@ -28,27 +28,27 @@ msgstr "Es requereix el camp Slug."
 
 msgctxt "error:sale.shop:"
 msgid "Select a date to export images"
-msgstr "Selecciona la data per exportar imatges"
+msgstr "Selecciona la data per exportar imatges."
 
 msgctxt "error:sale.shop:"
 msgid "Select a date to export menus"
-msgstr "Selecciona la data per exportar menús"
+msgstr "Selecciona la data per exportar menús."
 
 msgctxt "error:sale.shop:"
 msgid "Select a date to export prices"
-msgstr "Selecciona la data per exportar preus"
+msgstr "Selecciona la data per exportar preus."
 
 msgctxt "error:sale.shop:"
 msgid "Select a date to export products"
-msgstr "Selecciona la data per exportar productes"
+msgstr "Selecciona la data per exportar productes."
 
 msgctxt "error:sale.shop:"
 msgid "Select a top menu in sale shop"
-msgstr "Selecciona un menú principal per la botiga"
+msgstr "Selecciona un menú principal per la botiga."
 
 msgctxt "error:sale.shop:"
 msgid "Threre are not stock to export"
-msgstr "No hi ha estoc per exportar"
+msgstr "No hi ha estoc per exportar."
 
 msgctxt "field:esale.attribute.group,active:"
 msgid "Active"
@@ -102,8 +102,12 @@ msgctxt "field:esale.export.start,shop:"
 msgid "Shop"
 msgstr "Botiga"
 
+msgctxt "field:product.configuration,esale_attribute_group:"
+msgid "eSale Attribute Group"
+msgstr "eSale grup atribut"
+
 msgctxt "field:product.template,esale_attribute_group:"
-msgid "Attribute"
+msgid "eSale Attribute"
 msgstr "Atribut"
 
 msgctxt "field:product.template,esale_available:"
@@ -298,6 +302,10 @@ msgctxt "help:esale.export.start,shop:"
 msgid "Select shop will be export this product."
 msgstr "Selecciona la botiga per exportar aquests productes."
 
+msgctxt "help:product.template,esale_attribute_group:"
+msgid "Attribute in e-commerce plattaform"
+msgstr "Atribut en la plataforma e-commerce."
+
 msgctxt "help:product.template,esale_available:"
 msgid ""
 "This product are available in your eSale. If you need not publish this "
@@ -314,29 +322,29 @@ msgstr "La majoría de cercadors recomanen no més de 155 caràcters."
 
 msgctxt "help:product.template,esale_saleshops:"
 msgid "Select stores will be available this product."
-msgstr "Seleccciona les botigues que estarà disponible aquest producte"
+msgstr "Seleccciona les botigues que estarà disponible aquest producte."
 
 msgctxt "help:product.template,esale_sequence:"
 msgid "Gives the sequence order when displaying category list."
 msgstr ""
 "Escull la seqüència d'ordenació en que es mostrarà en els llistats de les "
-"categories"
+"categories."
 
 msgctxt "help:sale.shop,esale_last_images:"
 msgid "This date is last export (filter)"
-msgstr "La data de la última exportació (filtre)"
+msgstr "La data de la última exportació (filtre)."
 
 msgctxt "help:sale.shop,esale_last_menus:"
 msgid "This date is last export (filter)"
-msgstr "La data de la última exportació (filtre)"
+msgstr "La data de la última exportació (filtre)."
 
 msgctxt "help:sale.shop,esale_last_prices:"
 msgid "This date is last export (filter)"
-msgstr "La data de la última exportació (filtre)"
+msgstr "La data de la última exportació (filtre)."
 
 msgctxt "help:sale.shop,esale_last_products:"
 msgid "This date is last export (filter)"
-msgstr "La data de la última exportació (filtre)"
+msgstr "La data de la última exportació (filtre)."
 
 msgctxt "model:esale.attribute.group,name:"
 msgid "Esale Attribute Group"

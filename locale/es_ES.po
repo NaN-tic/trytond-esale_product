@@ -4,51 +4,51 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "error:esale.export.image:"
 msgid "Export product images %s IDs to %s shop"
-msgstr "Se ha exportado las imágenes de los productos %s IDs a la tienda %s"
+msgstr "Se ha exportado las imágenes de los productos %s IDs a la tienda %s."
 
 msgctxt "error:esale.export.price:"
 msgid "Export product prices %s IDs to %s shop"
-msgstr "Se ha exportado los precios de los productos %s IDs a la tienda %s"
+msgstr "Se ha exportado los precios de los productos %s IDs a la tienda %s."
 
 msgctxt "error:esale.export.product:"
 msgid "Export products %s IDs to %s shop"
-msgstr "Se ha exportado los productos %s IDs a la tienda %s"
+msgstr "Se ha exportado los productos %s IDs a la tienda %s."
 
 msgctxt "error:esale.export.stock:"
 msgid "Export product stocks %s IDs to %s shop"
-msgstr "Se ha exportado el stock de los productos %s IDs a la tienda %s"
+msgstr "Se ha exportado el stock de los productos %s IDs a la tienda %s."
 
 msgctxt "error:product.template:"
 msgid "Slug %s exists. Get another slug!"
-msgstr "Slug %s existe. Escoja otro slug"
+msgstr "Slug %s existe. Escoja otro slug."
 
 msgctxt "error:product.template:"
 msgid "Slug field is empty!"
-msgstr "Se requiere el campo Slug"
+msgstr "Se requiere el campo Slug."
 
 msgctxt "error:sale.shop:"
 msgid "Select a date to export images"
-msgstr "Selecciona una fecha para exportar imagenes"
+msgstr "Selecciona una fecha para exportar imagenes."
 
 msgctxt "error:sale.shop:"
 msgid "Select a date to export menus"
-msgstr "Selecciona una fecha para exportar menús"
+msgstr "Selecciona una fecha para exportar menús."
 
 msgctxt "error:sale.shop:"
 msgid "Select a date to export prices"
-msgstr "Selecciona una fecha para exportar precios"
+msgstr "Selecciona una fecha para exportar precios."
 
 msgctxt "error:sale.shop:"
 msgid "Select a date to export products"
-msgstr "Selecciona una fecha para exportar los productos"
+msgstr "Selecciona una fecha para exportar los productos."
 
 msgctxt "error:sale.shop:"
 msgid "Select a top menu in sale shop"
-msgstr "Selecciona el menú principal para esta tienda"
+msgstr "Selecciona el menú principal para esta tienda."
 
 msgctxt "error:sale.shop:"
 msgid "Threre are not stock to export"
-msgstr "No hay stock para exportar"
+msgstr "No hay stock para exportar."
 
 msgctxt "field:esale.attribute.group,active:"
 msgid "Active"
@@ -102,8 +102,12 @@ msgctxt "field:esale.export.start,shop:"
 msgid "Shop"
 msgstr "Tienda"
 
+msgctxt "field:product.configuration,esale_attribute_group:"
+msgid "eSale Attribute Group"
+msgstr "eSale grupo atributo"
+
 msgctxt "field:product.template,esale_attribute_group:"
-msgid "Attribute"
+msgid "eSale Attribute"
 msgstr "Atributo"
 
 msgctxt "field:product.template,esale_available:"
@@ -180,7 +184,7 @@ msgstr "Usuario modificación"
 
 msgctxt "field:product.template-product.related,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Fecha creación"
 
 msgctxt "field:product.template-product.related,create_uid:"
 msgid "Create User"
@@ -298,6 +302,10 @@ msgctxt "help:esale.export.start,shop:"
 msgid "Select shop will be export this product."
 msgstr "Selecciona la tienda a exportar este producto."
 
+msgctxt "help:product.template,esale_attribute_group:"
+msgid "Attribute in e-commerce plattaform"
+msgstr "Atributo en la plataforma e-commerce."
+
 msgctxt "help:product.template,esale_available:"
 msgid ""
 "This product are available in your eSale. If you need not publish this "
@@ -314,29 +322,29 @@ msgstr "La mayoria de buscadores recomiendan no más de 155 carácteres."
 
 msgctxt "help:product.template,esale_saleshops:"
 msgid "Select stores will be available this product."
-msgstr "Selecccione las tiendas para que este prodcuto esté disponible"
+msgstr "Selecccione las tiendas para que este prodcuto esté disponible."
 
 msgctxt "help:product.template,esale_sequence:"
 msgid "Gives the sequence order when displaying category list."
 msgstr ""
 "Escoja la secuencia de ordenación en que se mostrará el los listados de "
-"categoría"
+"categoría."
 
 msgctxt "help:sale.shop,esale_last_images:"
 msgid "This date is last export (filter)"
-msgstr "La fecha de la última exportación (filtro)"
+msgstr "La fecha de la última exportación (filtro)."
 
 msgctxt "help:sale.shop,esale_last_menus:"
 msgid "This date is last export (filter)"
-msgstr "La fecha de la última exportación (filtro)"
+msgstr "La fecha de la última exportación (filtro)."
 
 msgctxt "help:sale.shop,esale_last_prices:"
 msgid "This date is last export (filter)"
-msgstr "La fecha de la última exportación (filtro)"
+msgstr "La fecha de la última exportación (filtro)."
 
 msgctxt "help:sale.shop,esale_last_products:"
 msgid "This date is last export (filter)"
-msgstr "La fecha de la última exportación (filtro)"
+msgstr "La fecha de la última exportación (filtro)."
 
 msgctxt "model:esale.attribute.group,name:"
 msgid "Esale Attribute Group"
