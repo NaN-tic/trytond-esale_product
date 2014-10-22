@@ -27,7 +27,15 @@ class EsaleAttributeGroup(ModelSQL, ModelView):
 class Template:
     __name__ = 'product.template'
     esale_attribute_group = fields.Many2One('esale.attribute.group',
-        'Attribute')
+        'eSale Attribute',
+        help="Attribute in e-commerce plattaform")
+
+    @staticmethod
+    def default_esale_attribute_group():
+        Config = Pool().get('product.configuration')
+        config = Config(1)
+        return config.esale_attribute_group.id \
+            if config.esale_attribute_group else None
 
 
 class EsaleExportStart(ModelView):
