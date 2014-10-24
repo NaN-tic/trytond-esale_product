@@ -90,7 +90,7 @@ class EsaleExportProduct(Wizard):
         export_status = getattr(shop,
             'export_products_%s' % shop.esale_shop_app)
         templates = Transaction().context['active_ids']
-        export_status(shop, templates)
+        export_status(templates)
         self.result.info = self.raise_user_error('export_info',
                 (','.join(str(t) for t in templates), shop.rec_name),
                 raise_exception=False)
