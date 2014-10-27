@@ -47,15 +47,6 @@ class EsaleExportStart(ModelView):
         ],
         help='Select shop will be export this product.')
 
-    @staticmethod
-    def default_shop():
-        Shop = Pool().get('sale.shop')
-        shops = Shop.search([('esale_available', '=', True)])
-        if len(shops) == 1:
-            return shops[0].id
-        else:
-            return None
-
 
 class EsaleExportResult(ModelView):
     'Export Tryton to External Shop: Result'
@@ -84,6 +75,15 @@ class EsaleExportProduct(Wizard):
         cls._error_messages.update({
                 'export_info': 'Export products %s IDs to %s shop',
                 })
+
+    def default_start(self, fields):
+        Template = Pool().get('product.template')
+        template = Template(Transaction().context['active_id'])
+        for shop in template.esale_saleshops:
+            if shop.esale_available:
+                return {
+                    'shop': shop.id,
+                    }
 
     def transition_export(self):
         shop = self.start.shop
