@@ -125,6 +125,15 @@ class EsaleExportPrice(Wizard):
                 'export_info': 'Export product prices %s IDs to %s shop',
                 })
 
+    def default_start(self, fields):
+        Template = Pool().get('product.template')
+        template = Template(Transaction().context['active_id'])
+        for shop in template.esale_saleshops:
+            if shop.esale_available:
+                return {
+                    'shop': shop.id,
+                    }
+
     def transition_export(self):
         shop = self.start.shop
         export_status = getattr(shop, 'export_prices_%s' % shop.esale_shop_app)
@@ -164,6 +173,15 @@ class EsaleExportStock(Wizard):
                 'export_info': 'Export product stocks %s IDs to %s shop',
                 })
 
+    def default_start(self, fields):
+        Template = Pool().get('product.template')
+        template = Template(Transaction().context['active_id'])
+        for shop in template.esale_saleshops:
+            if shop.esale_available:
+                return {
+                    'shop': shop.id,
+                    }
+
     def transition_export(self):
         shop = self.start.shop
         export_status = getattr(shop, 'export_stocks_%s' % shop.esale_shop_app)
@@ -202,6 +220,15 @@ class EsaleExportImage(Wizard):
         cls._error_messages.update({
                 'export_info': 'Export product images %s IDs to %s shop',
                 })
+
+    def default_start(self, fields):
+        Template = Pool().get('product.template')
+        template = Template(Transaction().context['active_id'])
+        for shop in template.esale_saleshops:
+            if shop.esale_available:
+                return {
+                    'shop': shop.id,
+                    }
 
     def transition_export(self):
         shop = self.start.shop
