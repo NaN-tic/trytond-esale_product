@@ -132,12 +132,13 @@ class EsaleExportPrice(Wizard):
 
     def default_start(self, fields):
         Template = Pool().get('product.template')
-        template = Template(Transaction().context['active_id'])
-        for shop in template.esale_saleshops:
-            if shop.esale_available:
-                return {
-                    'shop': shop.id,
-                    }
+        templates = Template.browse(Transaction().context['active_ids'])
+        shops = [s.id for t in templates for s in t.esale_saleshops
+            if s.esale_available]
+        return {
+            'shops': shops,
+            'shop': shops[0],
+            }
 
     def transition_export(self):
         shop = self.start.shop
@@ -180,12 +181,13 @@ class EsaleExportStock(Wizard):
 
     def default_start(self, fields):
         Template = Pool().get('product.template')
-        template = Template(Transaction().context['active_id'])
-        for shop in template.esale_saleshops:
-            if shop.esale_available:
-                return {
-                    'shop': shop.id,
-                    }
+        templates = Template.browse(Transaction().context['active_ids'])
+        shops = [s.id for t in templates for s in t.esale_saleshops
+            if s.esale_available]
+        return {
+            'shops': shops,
+            'shop': shops[0],
+            }
 
     def transition_export(self):
         shop = self.start.shop
@@ -228,12 +230,13 @@ class EsaleExportImage(Wizard):
 
     def default_start(self, fields):
         Template = Pool().get('product.template')
-        template = Template(Transaction().context['active_id'])
-        for shop in template.esale_saleshops:
-            if shop.esale_available:
-                return {
-                    'shop': shop.id,
-                    }
+        templates = Template.browse(Transaction().context['active_ids'])
+        shops = [s.id for t in templates for s in t.esale_saleshops
+            if s.esale_available]
+        return {
+            'shops': shops,
+            'shop': shops[0],
+            }
 
     def transition_export(self):
         shop = self.start.shop
