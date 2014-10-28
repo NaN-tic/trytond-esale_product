@@ -80,8 +80,8 @@ class EsaleExportProduct(Wizard):
 
     def default_start(self, fields):
         Template = Pool().get('product.template')
-        template = Template(Transaction().context['active_id'])
-        shops = [s.id for s in template.esale_saleshops
+        templates = Template.browse(Transaction().context['active_ids'])
+        shops = [s.id for t in templates for s in t.esale_saleshops
             if s.esale_available]
         return {
             'shops': shops,
