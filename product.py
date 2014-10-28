@@ -4,6 +4,7 @@
 from trytond.model import ModelView, ModelSQL, fields
 from trytond.wizard import Wizard, StateTransition, StateView, Button
 from trytond.pool import Pool, PoolMeta
+from trytond.pyson import Eval
 from trytond.transaction import Transaction
 
 __all__ = ['EsaleAttributeGroup', 'Template', 'EsaleExportStart',
@@ -41,10 +42,11 @@ class Template:
 class EsaleExportStart(ModelView):
     'Export Tryton to External Shop: Start'
     __name__ = 'esale.export.start'
+    shops = fields.One2Many('sale.shop', None, 'Shops')
     shop = fields.Many2One('sale.shop', 'Shop', required=True,
         domain=[
-            ('esale_available', '=', True)
-        ],
+            ('id', 'in', Eval('shops'))
+        ], depends=['shops'],
         help='Select shop will be export this product.')
 
 
@@ -79,11 +81,12 @@ class EsaleExportProduct(Wizard):
     def default_start(self, fields):
         Template = Pool().get('product.template')
         template = Template(Transaction().context['active_id'])
-        for shop in template.esale_saleshops:
-            if shop.esale_available:
-                return {
-                    'shop': shop.id,
-                    }
+        shops = [s.id for s in template.esale_saleshops
+            if s.esale_available]
+        return {
+            'shops': shops,
+            'shop': shops[0],
+            }
 
     def transition_export(self):
         shop = self.start.shop
