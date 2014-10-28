@@ -89,14 +89,16 @@ class EsaleExportProduct(Wizard):
             }
 
     def transition_export(self):
+        Template = Pool().get('product.template')
         shop = self.start.shop
         export_status = getattr(shop,
             'export_products_%s' % shop.esale_shop_app)
-        templates = Transaction().context['active_ids']
+        templates = Template.browse(Transaction().context['active_ids'])
+        templates = [t.id for t in templates if shop in t.esale_saleshops]
         export_status(templates)
         self.result.info = self.raise_user_error('export_info',
-                (','.join(str(t) for t in templates), shop.rec_name),
-                raise_exception=False)
+            (','.join(str(t) for t in templates), shop.rec_name),
+            raise_exception=False)
         return 'result'
 
     def default_result(self, fields):
