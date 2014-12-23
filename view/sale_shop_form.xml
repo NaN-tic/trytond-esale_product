@@ -10,7 +10,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
     </xpath>
     <xpath
         expr="/form/notebook/page[@id='esale']/notebook/page[@id='actions']"
-        position="inside">
+        position="after">
         <page string="Catalog" id="catalog" col="6">
             <button name="export_prices" string="Export Prices"/>
             <label name="esale_last_prices"/>
