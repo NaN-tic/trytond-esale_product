@@ -46,10 +46,6 @@ msgctxt "error:sale.shop:"
 msgid "Select a top menu in sale shop"
 msgstr "Selecciona un menú principal per la botiga."
 
-msgctxt "error:sale.shop:"
-msgid "Threre are not stock to export"
-msgstr "No hi ha estoc per exportar."
-
 msgctxt "field:esale.attribute.group,active:"
 msgid "Active"
 msgstr "Activa"
@@ -101,6 +97,10 @@ msgstr "ID"
 msgctxt "field:esale.export.start,shop:"
 msgid "Shop"
 msgstr "Botiga"
+
+msgctxt "field:esale.export.start,shops:"
+msgid "Shops"
+msgstr "Botigues"
 
 msgctxt "field:product.configuration,esale_attribute_group:"
 msgid "eSale Attribute Group"
