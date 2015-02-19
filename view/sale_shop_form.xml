@@ -9,7 +9,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="esale_top_menu"/>
     </xpath>
     <xpath
-        expr="/form/notebook/page[@id='esale']/notebook/page[@id='actions']"
+        expr="/form/notebook/page[@id='esale']/notebook/page[@id='actions']/notebook/page[@id='orders']"
         position="after">
         <page string="Catalog" id="catalog" col="6">
             <button name="export_prices" string="Export Prices"/>
