@@ -46,6 +46,10 @@ msgctxt "error:sale.shop:"
 msgid "Select a top menu in sale shop"
 msgstr "Selecciona el menú principal para esta tienda."
 
+msgctxt "error:sale.shop:"
+msgid "Threre are not stock to export"
+msgstr "No hay stock para exportar"
+
 msgctxt "field:esale.attribute.group,active:"
 msgid "Active"
 msgstr "Activo"
