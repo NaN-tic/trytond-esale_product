@@ -83,6 +83,8 @@ class EsaleExportProduct(Wizard):
         templates = Template.browse(Transaction().context['active_ids'])
         shops = [s.id for t in templates for s in t.esale_saleshops
             if s.esale_available]
+        if not shops:
+            return {}
         return {
             'shops': shops,
             'shop': shops[0],
@@ -135,6 +137,8 @@ class EsaleExportPrice(Wizard):
         templates = Template.browse(Transaction().context['active_ids'])
         shops = [s.id for t in templates for s in t.esale_saleshops
             if s.esale_available]
+        if not shops:
+            return {}
         return {
             'shops': shops,
             'shop': shops[0],
@@ -184,6 +188,8 @@ class EsaleExportStock(Wizard):
         templates = Template.browse(Transaction().context['active_ids'])
         shops = [s.id for t in templates for s in t.esale_saleshops
             if s.esale_available]
+        if not shops:
+            return {}
         return {
             'shops': shops,
             'shop': shops[0],
@@ -233,6 +239,8 @@ class EsaleExportImage(Wizard):
         templates = Template.browse(Transaction().context['active_ids'])
         shops = [s.id for t in templates for s in t.esale_saleshops
             if s.esale_available]
+        if not shops:
+            return {}
         return {
             'shops': shops,
             'shop': shops[0],
