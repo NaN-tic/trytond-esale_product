@@ -32,6 +32,12 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="model">product.template,-1</field>
             <field name="action" ref="wizard_esale_export_product"/>
         </record>
+        <record model="ir.action-res.group"
+            id="action_group_wizard_esale_export_product">
+            <field name="action" ref="wizard_esale_export_product"/>
+            <field name="group" ref="esale.group_esale"/>
+        </record>
+
         <!-- eSale Export Prices - Wizard -->
         <record model="ir.action.wizard" id="wizard_esale_export_price">
             <field name="name">Export Prices eSale</field>
@@ -42,6 +48,11 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="keyword">form_action</field>
             <field name="model">product.template,-1</field>
             <field name="action" ref="wizard_esale_export_price"/>
+        </record>
+        <record model="ir.action-res.group"
+            id="action_group_wizard_esale_export_price">
+            <field name="action" ref="wizard_esale_export_price"/>
+            <field name="group" ref="esale.group_esale"/>
         </record>
         <!-- eSale Export Stock - Wizard -->
         <record model="ir.action.wizard" id="wizard_esale_export_stock">
@@ -54,6 +65,11 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="model">product.template,-1</field>
             <field name="action" ref="wizard_esale_export_stock"/>
         </record>
+        <record model="ir.action-res.group"
+            id="action_group_wizard_esale_export_stock">
+            <field name="action" ref="wizard_esale_export_stock"/>
+            <field name="group" ref="esale.group_esale"/>
+        </record>
         <!-- eSale Export Images - Wizard -->
         <record model="ir.action.wizard" id="wizard_esale_export_image">
             <field name="name">Export Images eSale</field>
@@ -64,6 +80,11 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="keyword">form_action</field>
             <field name="model">product.template,-1</field>
             <field name="action" ref="wizard_esale_export_image"/>
+        </record>
+        <record model="ir.action-res.group"
+            id="action_group_wizard_esale_export_image">
+            <field name="action" ref="wizard_esale_export_image"/>
+            <field name="group" ref="esale.group_esale"/>
         </record>
 
         <!--eSale Attribute Group -->
