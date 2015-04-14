@@ -35,7 +35,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         <record model="ir.action-res.group"
             id="action_group_wizard_esale_export_product">
             <field name="action" ref="wizard_esale_export_product"/>
-            <field name="group" ref="esale.group_esale"/>
+            <field name="group" ref="product_esale.group_product_esale"/>
         </record>
 
         <!-- eSale Export Prices - Wizard -->
@@ -52,7 +52,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         <record model="ir.action-res.group"
             id="action_group_wizard_esale_export_price">
             <field name="action" ref="wizard_esale_export_price"/>
-            <field name="group" ref="esale.group_esale"/>
+            <field name="group" ref="product_esale.group_product_esale"/>
         </record>
         <!-- eSale Export Stock - Wizard -->
         <record model="ir.action.wizard" id="wizard_esale_export_stock">
@@ -68,7 +68,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         <record model="ir.action-res.group"
             id="action_group_wizard_esale_export_stock">
             <field name="action" ref="wizard_esale_export_stock"/>
-            <field name="group" ref="esale.group_esale"/>
+            <field name="group" ref="product_esale.group_product_esale"/>
         </record>
         <!-- eSale Export Images - Wizard -->
         <record model="ir.action.wizard" id="wizard_esale_export_image">
@@ -84,7 +84,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         <record model="ir.action-res.group"
             id="action_group_wizard_esale_export_image">
             <field name="action" ref="wizard_esale_export_image"/>
-            <field name="group" ref="esale.group_esale"/>
+            <field name="group" ref="product_esale.group_product_esale"/>
         </record>
 
         <!--eSale Attribute Group -->
