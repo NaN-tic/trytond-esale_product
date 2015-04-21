@@ -134,10 +134,6 @@ msgctxt "field:product.template,esale_metatitle:"
 msgid "Meta Title"
 msgstr "Meta Title"
 
-msgctxt "field:product.template,esale_saleshops:"
-msgid "Websites"
-msgstr "Botigues"
-
 msgctxt "field:product.template,esale_sequence:"
 msgid "Sequence"
 msgstr "Seqüència"
@@ -323,10 +319,6 @@ msgid ""
 "Almost all search engines recommend it to be shorter than 155 characters of "
 "plain text"
 msgstr "La majoría de cercadors recomanen no més de 155 caràcters."
-
-msgctxt "help:product.template,esale_saleshops:"
-msgid "Select stores will be available this product."
-msgstr "Seleccciona les botigues que estarà disponible aquest producte."
 
 msgctxt "help:product.template,esale_sequence:"
 msgid "Gives the sequence order when displaying category list."
