@@ -81,7 +81,7 @@ class EsaleExportProduct(Wizard):
     def default_start(self, fields):
         Template = Pool().get('product.template')
         templates = Template.browse(Transaction().context['active_ids'])
-        shops = [s.id for t in templates for s in t.esale_saleshops
+        shops = [s.id for t in templates for s in t.shops
             if s.esale_available]
         if not shops:
             return {}
@@ -96,7 +96,7 @@ class EsaleExportProduct(Wizard):
         export_status = getattr(shop,
             'export_products_%s' % shop.esale_shop_app)
         templates = Template.browse(Transaction().context['active_ids'])
-        templates = [t.id for t in templates if shop in t.esale_saleshops]
+        templates = [t.id for t in templates if shop in t.shops]
         export_status(templates)
         self.result.info = self.raise_user_error('export_info',
             (','.join(str(t) for t in templates), shop.rec_name),
@@ -135,7 +135,7 @@ class EsaleExportPrice(Wizard):
     def default_start(self, fields):
         Template = Pool().get('product.template')
         templates = Template.browse(Transaction().context['active_ids'])
-        shops = [s.id for t in templates for s in t.esale_saleshops
+        shops = [s.id for t in templates for s in t.shops
             if s.esale_available]
         if not shops:
             return {}
@@ -186,7 +186,7 @@ class EsaleExportStock(Wizard):
     def default_start(self, fields):
         Template = Pool().get('product.template')
         templates = Template.browse(Transaction().context['active_ids'])
-        shops = [s.id for t in templates for s in t.esale_saleshops
+        shops = [s.id for t in templates for s in t.shops
             if s.esale_available]
         if not shops:
             return {}
@@ -237,8 +237,7 @@ class EsaleExportImage(Wizard):
     def default_start(self, fields):
         Template = Pool().get('product.template')
         templates = Template.browse(Transaction().context['active_ids'])
-        shops = [s.id for t in templates for s in t.esale_saleshops
-            if s.esale_available]
+        shops = [s.id for t in templates for s in t.shops if s.esale_available]
         if not shops:
             return {}
         return {
