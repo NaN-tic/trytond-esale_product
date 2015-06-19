@@ -63,7 +63,7 @@ class SaleShop:
                 self.raise_user_error('select_date_prices')
             export_prices = getattr(shop,
                 'export_prices_%s' % shop.esale_shop_app)
-            export_prices(shop)
+            export_prices()
 
     @classmethod
     @ModelView.button
@@ -76,7 +76,7 @@ class SaleShop:
                 self.raise_user_error('select_date_images')
             export_images = getattr(shop,
                 'export_images_%s' % shop.esale_shop_app)
-            export_images(shop)
+            export_images()
 
     @classmethod
     @ModelView.button
@@ -91,7 +91,7 @@ class SaleShop:
                 self.raise_user_error('select_date_menus')
             export_menus = getattr(shop,
                 'export_menus_%s' % shop.esale_shop_app)
-            export_menus(shop)
+            export_menus()
 
     def export_products_tryton(self, shop):
         """Export Products to Tryton e-Sale
