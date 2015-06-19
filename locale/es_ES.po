@@ -18,6 +18,10 @@ msgctxt "error:esale.export.stock:"
 msgid "Export product stocks %s IDs to %s shop"
 msgstr "Se ha exportado el stock de los productos %s IDs a la tienda %s."
 
+msgctxt "error:esale.export.stock:"
+msgid "Install stock sync module to %s shop"
+msgstr "Instala el módulo de sincronizar stock para la tienda %s"
+
 msgctxt "error:product.template:"
 msgid "Slug %s exists. Get another slug!"
 msgstr "Slug %s existe. Escoja otro slug."
