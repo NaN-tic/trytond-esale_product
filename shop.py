@@ -129,3 +129,15 @@ class SaleShop:
         """
         #TODO: Export Tryton menus
         return True
+
+    @classmethod
+    def export_cron_product(cls):
+        """
+        Cron export product:
+        """
+        shops = cls.search([
+            ('esale_available', '=', True),
+            ('esale_scheduler', '=', True),
+            ])
+        cls.export_products(shops)
+        return True
