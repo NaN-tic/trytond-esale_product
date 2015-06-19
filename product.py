@@ -181,6 +181,7 @@ class EsaleExportStock(Wizard):
         super(EsaleExportStock, cls).__setup__()
         cls._error_messages.update({
                 'export_info': 'Export product stocks %s IDs to %s shop',
+                'install_stock_sync': 'Install stock sync module to %s shop',
                 })
 
     def default_start(self, fields):
@@ -197,12 +198,16 @@ class EsaleExportStock(Wizard):
 
     def transition_export(self):
         shop = self.start.shop
-        export_status = getattr(shop, 'export_stocks_%s' % shop.esale_shop_app)
-        templates = Transaction().context['active_ids']
-        export_status(templates)
-        self.result.info = self.raise_user_error('export_info',
-                (','.join(str(t) for t in templates), shop.rec_name),
-                raise_exception=False)
+        if hasattr(shop, 'export_stocks_%s' % shop.esale_shop_app):
+            export_status = getattr(shop, 'export_stocks_%s' % shop.esale_shop_app)
+            templates = Transaction().context['active_ids']
+            export_status(templates)
+            self.result.info = self.raise_user_error('export_info',
+                    (','.join(str(t) for t in templates), shop.rec_name),
+                    raise_exception=False)
+        else:
+            self.result.info = self.raise_user_error('install_stock_sync',
+                    (shop.rec_name), raise_exception=False)
         return 'result'
 
     def default_result(self, fields):
