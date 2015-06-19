@@ -374,6 +374,10 @@ msgctxt "model:ir.action,name:wizard_esale_export_stock"
 msgid "Export Stock eSale"
 msgstr "Exporta estoc eSale"
 
+msgctxt "model:ir.cron,name:cron_esale_export_product"
+msgid "eSale - Export Product"
+msgstr "eSale - Exporta productes"
+
 msgctxt "model:product.template-product.crosssell,name:"
 msgid "Product - Related"
 msgstr "Producte - Relacionat"
