@@ -25,7 +25,6 @@ class SaleShop:
     def __setup__(cls):
         super(SaleShop, cls).__setup__()
         cls._error_messages.update({
-            'stock_not_export': 'Threre are not stock to export',
             'menu_not_export': 'Select a top menu in sale shop',
             'select_date_products': 'Select a date to export products',
             'select_date_prices': 'Select a date to export prices',
@@ -108,12 +107,6 @@ class SaleShop:
         #TODO: Export Tryton prices
         active_ids = Transaction().context.get('active_ids')
         return True
-
-    def export_stocks_tryton(self, shop):
-        """Export Stocks to Tryton e-Sale
-        :param shop: Obj
-        """
-        self.raise_user_error('stock_not_export')
 
     def export_images_tryton(self, shop):
         """Export Images to Tryton e-Sale

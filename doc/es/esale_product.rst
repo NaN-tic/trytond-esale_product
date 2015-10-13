@@ -26,8 +26,8 @@ exportar/clonar los productos a la tienda.
 * Exportar precios. Exporta todos los precios a partir de una fecha de creación
   o modificación según tarifa o precio venta de la tienda.
 * Exporta stock. Exporta todos los stocks a partir de una fecha de creación o
-  modificación. En el caso de Tryton eSale esta opción no es necesaria ya que
-  los stocks se calculan en el instante.
+  modificación (si hay gestión de stock). En el caso de Tryton eSale esta opción
+  no es necesaria ya que los stocks se calculan en el instante.
 * Exportar imágenes. Exporta todas las imágenes a partir de una fecha de
   creación o modificación.
 

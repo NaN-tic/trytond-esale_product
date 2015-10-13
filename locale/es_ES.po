@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
@@ -14,21 +14,9 @@ msgctxt "error:esale.export.product:"
 msgid "Export products %s IDs to %s shop"
 msgstr "Se ha exportado los productos %s IDs a la tienda %s."
 
-msgctxt "error:esale.export.stock:"
-msgid "Export product stocks %s IDs to %s shop"
-msgstr "Se ha exportado el stock de los productos %s IDs a la tienda %s."
-
-msgctxt "error:esale.export.stock:"
-msgid "Install stock sync module to %s shop"
-msgstr "Instala el módulo de sincronizar stock para la tienda %s"
-
 msgctxt "error:product.template:"
 msgid "Slug %s exists. Get another slug!"
 msgstr "Slug %s existe. Escoja otro slug."
-
-msgctxt "error:product.template:"
-msgid "Slug field is empty!"
-msgstr "Se requiere el campo Slug."
 
 msgctxt "error:sale.shop:"
 msgid "Select a date to export images"
@@ -49,10 +37,6 @@ msgstr "Selecciona una fecha para exportar los productos."
 msgctxt "error:sale.shop:"
 msgid "Select a top menu in sale shop"
 msgstr "Selecciona el menú principal para esta tienda."
-
-msgctxt "error:sale.shop:"
-msgid "Threre are not stock to export"
-msgstr "No hay stock para exportar"
 
 msgctxt "field:esale.attribute.group,active:"
 msgid "Active"
@@ -370,10 +354,6 @@ msgctxt "model:ir.action,name:wizard_esale_export_product"
 msgid "Export Products eSale"
 msgstr "Exportar productos eSale"
 
-msgctxt "model:ir.action,name:wizard_esale_export_stock"
-msgid "Export Stock eSale"
-msgstr "Exportar stock eSale"
-
 msgctxt "model:ir.cron,name:cron_esale_export_product"
 msgid "eSale - Export Product"
 msgstr "eSale - Exportar productos"
@@ -503,17 +483,5 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 msgctxt "wizard_button:esale.export.product,start,export:"
-msgid "Export"
-msgstr "Exportar"
-
-msgctxt "wizard_button:esale.export.stock,result,end:"
-msgid "Close"
-msgstr "Cerrar"
-
-msgctxt "wizard_button:esale.export.stock,start,end:"
-msgid "Cancel"
-msgstr "Cancelar"
-
-msgctxt "wizard_button:esale.export.stock,start,export:"
 msgid "Export"
 msgstr "Exportar"

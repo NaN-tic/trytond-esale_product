@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
@@ -14,21 +14,9 @@ msgctxt "error:esale.export.product:"
 msgid "Export products %s IDs to %s shop"
 msgstr "S'ha exportat els productes %s IDs a la botiga %s."
 
-msgctxt "error:esale.export.stock:"
-msgid "Export product stocks %s IDs to %s shop"
-msgstr "S'ha exportat l'estoc de productes %s IDs a la botiga %s."
-
-msgctxt "error:esale.export.stock:"
-msgid "Install stock sync module to %s shop"
-msgstr "Instal·la el mòdul de sincronitzar stock per la botiga %s"
-
 msgctxt "error:product.template:"
 msgid "Slug %s exists. Get another slug!"
 msgstr "Slug %s existeix. Tria un altre slug."
-
-msgctxt "error:product.template:"
-msgid "Slug field is empty!"
-msgstr "Es requereix el camp Slug."
 
 msgctxt "error:sale.shop:"
 msgid "Select a date to export images"
@@ -49,10 +37,6 @@ msgstr "Selecciona la data per exportar productes."
 msgctxt "error:sale.shop:"
 msgid "Select a top menu in sale shop"
 msgstr "Selecciona un menú principal per la botiga."
-
-msgctxt "error:sale.shop:"
-msgid "Threre are not stock to export"
-msgstr "No hi ha estoc per exportar"
 
 msgctxt "field:esale.attribute.group,active:"
 msgid "Active"
@@ -370,10 +354,6 @@ msgctxt "model:ir.action,name:wizard_esale_export_product"
 msgid "Export Products eSale"
 msgstr "Exporta productes eSale"
 
-msgctxt "model:ir.action,name:wizard_esale_export_stock"
-msgid "Export Stock eSale"
-msgstr "Exporta estoc eSale"
-
 msgctxt "model:ir.cron,name:cron_esale_export_product"
 msgid "eSale - Export Product"
 msgstr "eSale - Exporta productes"
@@ -503,17 +483,5 @@ msgid "Cancel"
 msgstr "Cancel·la"
 
 msgctxt "wizard_button:esale.export.product,start,export:"
-msgid "Export"
-msgstr "Exporta"
-
-msgctxt "wizard_button:esale.export.stock,result,end:"
-msgid "Close"
-msgstr "Tanca"
-
-msgctxt "wizard_button:esale.export.stock,start,end:"
-msgid "Cancel"
-msgstr "Cancel·la"
-
-msgctxt "wizard_button:esale.export.stock,start,export:"
 msgid "Export"
 msgstr "Exporta"
