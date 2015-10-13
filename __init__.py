@@ -18,6 +18,5 @@ def register():
     Pool.register(
         EsaleExportProduct,
         EsaleExportPrice,
-        EsaleExportStock,
         EsaleExportImage,
         module='esale_product', type_='wizard')
