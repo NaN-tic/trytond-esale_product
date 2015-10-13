@@ -9,7 +9,7 @@ from trytond.transaction import Transaction
 
 __all__ = ['EsaleAttributeGroup', 'Template', 'EsaleExportStart',
     'EsaleExportResult', 'EsaleExportProduct', 'EsaleExportPrice',
-    'EsaleExportStock', 'EsaleExportImage']
+    'EsaleExportImage']
 __metaclass__ = PoolMeta
 
 
@@ -152,62 +152,6 @@ class EsaleExportPrice(Wizard):
         self.result.info = self.raise_user_error('export_info',
                 (','.join(str(t) for t in templates), shop.rec_name),
                 raise_exception=False)
-        return 'result'
-
-    def default_result(self, fields):
-        info_ = self.result.info
-        return {
-            'info': info_,
-            }
-
-
-class EsaleExportStock(Wizard):
-    """Export Stocks Tryton to External Shop"""
-    __name__ = "esale.export.stock"
-
-    start = StateView('esale.export.start',
-        'esale_product.esale_export_start', [
-            Button('Cancel', 'end', 'tryton-cancel'),
-            Button('Export', 'export', 'tryton-ok', default=True),
-            ])
-    export = StateTransition()
-    result = StateView('esale.export.result',
-        'esale_product.esale_export_result', [
-            Button('Close', 'end', 'tryton-close'),
-            ])
-
-    @classmethod
-    def __setup__(cls):
-        super(EsaleExportStock, cls).__setup__()
-        cls._error_messages.update({
-                'export_info': 'Export product stocks %s IDs to %s shop',
-                'install_stock_sync': 'Install stock sync module to %s shop',
-                })
-
-    def default_start(self, fields):
-        Template = Pool().get('product.template')
-        templates = Template.browse(Transaction().context['active_ids'])
-        shops = [s.id for t in templates for s in t.shops
-            if s.esale_available]
-        if not shops:
-            return {}
-        return {
-            'shops': shops,
-            'shop': shops[0],
-            }
-
-    def transition_export(self):
-        shop = self.start.shop
-        if hasattr(shop, 'export_stocks_%s' % shop.esale_shop_app):
-            export_status = getattr(shop, 'export_stocks_%s' % shop.esale_shop_app)
-            templates = Transaction().context['active_ids']
-            export_status(templates)
-            self.result.info = self.raise_user_error('export_info',
-                    (','.join(str(t) for t in templates), shop.rec_name),
-                    raise_exception=False)
-        else:
-            self.result.info = self.raise_user_error('install_stock_sync',
-                    (shop.rec_name), raise_exception=False)
         return 'result'
 
     def default_result(self, fields):
