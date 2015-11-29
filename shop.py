@@ -2,7 +2,6 @@
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
 from trytond.model import ModelView, fields
-from trytond.transaction import Transaction
 from trytond.pool import PoolMeta
 
 __all__ = ['SaleShop']
@@ -96,37 +95,37 @@ class SaleShop:
         """Export Products to Tryton e-Sale
         :param shop: Obj
         """
-        #TODO: Export Tryton product
-        active_ids = Transaction().context.get('active_ids')
+        # TODO: Export Tryton product
+        # active_ids = Transaction().context.get('active_ids')
         return True
 
     def export_prices_tryton(self, shop):
         """Export Prices to Tryton e-Sale
         :param shop: Obj
         """
-        #TODO: Export Tryton prices
-        active_ids = Transaction().context.get('active_ids')
+        # TODO: Export Tryton prices
+        # active_ids = Transaction().context.get('active_ids')
         return True
 
     def export_images_tryton(self, shop):
         """Export Images to Tryton e-Sale
         :param shop: Obj
         """
-        #TODO: Export Tryton images
-        active_ids = Transaction().context.get('active_ids')
+        # TODO: Export Tryton images
+        # active_ids = Transaction().context.get('active_ids')
         return True
 
     def export_menus_tryton(self, shop):
         """Export Menus to Tryton e-Sale
         :param shop: Obj
         """
-        #TODO: Export Tryton menus
+        # TODO: Export Tryton menus
         return True
 
     @classmethod
     def export_cron_product(cls):
         """
-        Cron export product:
+        Cron export product
         """
         shops = cls.search([
             ('esale_available', '=', True),
