@@ -10,7 +10,6 @@ from trytond.transaction import Transaction
 __all__ = ['EsaleAttributeGroup', 'Template', 'EsaleExportStart',
     'EsaleExportResult', 'EsaleExportProduct', 'EsaleExportPrice',
     'EsaleExportImage']
-__metaclass__ = PoolMeta
 
 
 class EsaleAttributeGroup(ModelSQL, ModelView):
@@ -26,6 +25,7 @@ class EsaleAttributeGroup(ModelSQL, ModelView):
 
 
 class Template:
+    __metaclass__ = PoolMeta
     __name__ = 'product.template'
     esale_attribute_group = fields.Many2One('esale.attribute.group',
         'eSale Attribute',
