@@ -12,3 +12,5 @@ class Configuration:
     __name__ = 'product.configuration'
     esale_attribute_group = fields.Property(fields.Many2One('esale.attribute.group',
             'eSale Attribute Group'))
+    esale_media_uri = fields.Char('Media URI',
+        help='eSale Media URI')
