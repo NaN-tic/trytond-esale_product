@@ -81,7 +81,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="perm_delete" eval="False"/>
         </record>
 
-        <!-- Export Magento Product CSV -->
+        <!-- Export eSale Product CSV -->
         <record model="ir.ui.view" id="esale_export_csv_start">
             <field name="model">esale.export.csv.start</field>
             <field name="type">form</field>
