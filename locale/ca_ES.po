@@ -74,6 +74,38 @@ msgctxt "field:esale.attribute.group,write_uid:"
 msgid "Write User"
 msgstr "Usuari modificació"
 
+msgctxt "field:esale.export.csv.result,csv_file:"
+msgid "CSV"
+msgstr "CSV"
+
+msgctxt "field:esale.export.csv.result,file_name:"
+msgid "File Name"
+msgstr "Nom fitxer"
+
+msgctxt "field:esale.export.csv.result,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:esale.export.csv.start,from_date:"
+msgid "From Date"
+msgstr "Data inicial"
+
+msgctxt "field:esale.export.csv.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:esale.export.csv.start,language:"
+msgid "Language"
+msgstr "Idioma"
+
+msgctxt "field:esale.export.csv.start,shop:"
+msgid "Shop"
+msgstr "Botiga"
+
+msgctxt "field:esale.export.csv.start,to_date:"
+msgid "To Date"
+msgstr "Data final"
+
 msgctxt "field:esale.export.result,id:"
 msgid "ID"
 msgstr "ID"
@@ -97,6 +129,10 @@ msgstr "Botigues"
 msgctxt "field:product.configuration,esale_attribute_group:"
 msgid "eSale Attribute Group"
 msgstr "eSale grup atribut"
+
+msgctxt "field:product.configuration,esale_media_uri:"
+msgid "Media URI"
+msgstr "Media URI"
 
 msgctxt "field:product.template,esale_attribute_group:"
 msgid "eSale Attribute"
@@ -286,9 +322,28 @@ msgctxt "field:sale.shop,esale_top_menu:"
 msgid "Top Menu"
 msgstr "Top menú"
 
+msgctxt "help:esale.export.csv.start,from_date:"
+msgid ""
+"Filter products create/write from this date. An empty value are all catalog "
+"product."
+msgstr ""
+"Filtra els productes creats/modificats per aquesta data. Un valor nul és tot"
+" el catàleg."
+
+msgctxt "help:esale.export.csv.start,to_date:"
+msgid ""
+"Filter products create/write to this date. An empty value is today (now)."
+msgstr ""
+"Filtra productes creats/modificats per aquesta data. Un valor nul és avui "
+"(ara)."
+
 msgctxt "help:esale.export.start,shop:"
 msgid "Select shop will be export this product."
 msgstr "Selecciona la botiga per exportar aquests productes."
+
+msgctxt "help:product.configuration,esale_media_uri:"
+msgid "eSale Media URI"
+msgstr "eSale Media URI"
 
 msgctxt "help:product.template,esale_attribute_group:"
 msgid "Attribute in e-commerce plattaform"
@@ -334,6 +389,14 @@ msgctxt "model:esale.attribute.group,name:"
 msgid "Esale Attribute Group"
 msgstr "Atributs de grup"
 
+msgctxt "model:esale.export.csv.result,name:"
+msgid "eSale Export CSV Result"
+msgstr "Resultat exporta eSale CSV"
+
+msgctxt "model:esale.export.csv.start,name:"
+msgid "eSale Export CSV Start"
+msgstr "Inici exporta eSale CSV"
+
 msgctxt "model:esale.export.result,name:"
 msgid "Export Tryton to External Shop: Result"
 msgstr "Exporta Tryton a botiga externa: resultat"
@@ -341,6 +404,10 @@ msgstr "Exporta Tryton a botiga externa: resultat"
 msgctxt "model:esale.export.start,name:"
 msgid "Export Tryton to External Shop: Start"
 msgstr "Exporta Tryton a botiga externa: inici"
+
+msgctxt "model:ir.action,name:wizard_esale_export_csv"
+msgid "Export eSale CSV"
+msgstr "Exportar eSale CSV"
 
 msgctxt "model:ir.action,name:wizard_esale_export_image"
 msgid "Export Images eSale"
@@ -357,6 +424,10 @@ msgstr "Exporta productes eSale"
 msgctxt "model:ir.cron,name:cron_esale_export_product"
 msgid "eSale - Export Product"
 msgstr "eSale - Exporta productes"
+
+msgctxt "model:ir.ui.menu,name:menu_esale_export_csv"
+msgid "Export eSale CSV"
+msgstr "Exportar eSale CSV"
 
 msgctxt "model:product.template-product.crosssell,name:"
 msgid "Product - Related"
@@ -389,6 +460,22 @@ msgstr "Cap"
 msgctxt "selection:product.template,esale_visibility:"
 msgid "Search"
 msgstr "Cerca"
+
+msgctxt "view:esale.export.csv.result:"
+msgid "Export eSale CSV"
+msgstr "Exportar eSale CSV"
+
+msgctxt "view:esale.export.csv.start:"
+msgid "Export eSale CSV"
+msgstr "Exportar eSale CSV"
+
+msgctxt "view:esale.export.csv.start:"
+msgid "Export eSale products to CSV file."
+msgstr "Exporta productes eSale a fitxer CSV."
+
+msgctxt "view:esale.export.csv.start:"
+msgid "Note that this operation may take a few minutes."
+msgstr "Tingueu en compte que aquesta operació pot trigar uns minuts."
 
 msgctxt "view:esale.export.result:"
 msgid "eSale Clone"
@@ -449,6 +536,18 @@ msgstr "Exporta preus"
 msgctxt "view:sale.shop:"
 msgid "Export Products"
 msgstr "Exporta productes"
+
+msgctxt "wizard_button:esale.export.csv,result,end:"
+msgid "Close"
+msgstr "Tanca"
+
+msgctxt "wizard_button:esale.export.csv,start,end:"
+msgid "Cancel"
+msgstr "Cancel·la"
+
+msgctxt "wizard_button:esale.export.csv,start,export:"
+msgid "Export"
+msgstr "Exporta"
 
 msgctxt "wizard_button:esale.export.image,result,end:"
 msgid "Close"

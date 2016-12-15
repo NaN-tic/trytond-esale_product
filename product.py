@@ -6,10 +6,12 @@ from trytond.wizard import Wizard, StateTransition, StateView, Button
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
+from trytond.modules.product_esale.tools import slugify
 
-__all__ = ['EsaleAttributeGroup', 'Template', 'EsaleExportStart',
+__all__ = ['Template', 'Product', 'EsaleAttributeGroup', 'EsaleExportStart',
     'EsaleExportResult', 'EsaleExportProduct', 'EsaleExportPrice',
-    'EsaleExportImage']
+    'EsaleExportImage', 'EsaleExportCSVStart', 'EsaleExportCSVResult',
+    'EsaleExportCSV']
 
 
 class EsaleAttributeGroup(ModelSQL, ModelView):
@@ -37,6 +39,39 @@ class Template:
         config = Config(1)
         return config.esale_attribute_group.id \
             if config.esale_attribute_group else None
+
+
+class Product:
+    __metaclass__ = PoolMeta
+    __name__ = 'product.product'
+
+    @classmethod
+    def esale_export_csv(cls, shop, lang, from_date=None, to_date=None):
+        'eSale Export CSV'
+        # get domain from esale APP
+        product_domain = getattr(cls, '%s_product_domain' % shop.esale_shop_app)
+        domain = product_domain([shop.id])
+
+        if from_date:
+            domain += [['OR',
+                        ('create_date', '>=', from_date),
+                        ('write_date', '>=', from_date),
+                        ('template.create_date', '>=', from_date),
+                        ('template.write_date', '>=', from_date),
+                    ]]
+        if to_date:
+            domain += [['OR',
+                        ('create_date', '<=', to_date),
+                        ('write_date', '<=', to_date),
+                        ('template.create_date', '<=', to_date),
+                        ('template.write_date', '<=', to_date),
+                    ]]
+
+        products = cls.search(domain)
+
+        export_csv = getattr(cls, 'esale_export_csv_%s' % shop.esale_shop_app)
+        output = export_csv(shop, products, lang)
+        return output
 
 
 class EsaleExportStart(ModelView):
@@ -208,4 +243,78 @@ class EsaleExportImage(Wizard):
         info_ = self.result.info
         return {
             'info': info_,
+            }
+
+
+class EsaleExportCSVStart(ModelView):
+    'eSale Export CSV Start'
+    __name__ = 'esale.export.csv.start'
+    shop = fields.Many2One('sale.shop', 'Shop', required=True,
+        domain=[('esale_available', '=', True)])
+    language = fields.Many2One('ir.lang', 'Language', required=True,
+        domain=[('translatable', '=', True)])
+    from_date = fields.DateTime('From Date',
+        help='Filter products create/write from this date. '
+        'An empty value are all catalog product.')
+    to_date = fields.DateTime('To Date',
+        help='Filter products create/write to this date. '
+        'An empty value is today (now).')
+
+    @staticmethod
+    def default_shop():
+        User = Pool().get('res.user')
+        user = User(Transaction().user)
+        return user.shop.id if user.shop else None
+
+    @staticmethod
+    def default_language():
+        User = Pool().get('res.user')
+        user = User(Transaction().user)
+        return user.language.id if user.language else None
+
+
+class EsaleExportCSVResult(ModelView):
+    'eSale Export CSV Result'
+    __name__ = 'esale.export.csv.result'
+    csv_file = fields.Binary('CSV', filename='file_name')
+    file_name = fields.Text('File Name')
+
+
+class EsaleExportCSV(Wizard):
+    'eSale Export CSV'
+    __name__ = "esale.export.csv"
+    start = StateView('esale.export.csv.start',
+        'esale_product.esale_export_csv_start', [
+            Button('Cancel', 'end', 'tryton-cancel'),
+            Button('Export', 'export', 'tryton-ok', default=True),
+            ])
+    export = StateTransition()
+    result = StateView('esale.export.csv.result',
+        'esale_product.esale_export_csv_result', [
+            Button('Close', 'end', 'tryton-close'),
+            ])
+
+    def transition_export(self):
+        pool = Pool()
+        Date = pool.get('ir.date')
+        Product = pool.get('product.product')
+
+        shop = self.start.shop
+        lang = self.start.language.code
+        from_date = self.start.from_date
+        to_date = self.start.to_date
+
+        output = Product.esale_export_csv(shop, lang, from_date, to_date)
+
+        self.result.csv_file = fields.Binary.cast(output.getvalue())
+        self.result.file_name = '%s-%s-%s.csv' % (
+            slugify(shop.name.replace('.', '-')),
+            lang.split('_')[0], # TODO 4.2 no split locale code
+            Date.today())
+        return 'result'
+
+    def default_result(self, fields):
+        return {
+            'csv_file': self.result.csv_file,
+            'file_name': self.result.file_name,
             }
