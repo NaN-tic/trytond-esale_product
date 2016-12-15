@@ -5,10 +5,10 @@ from trytond.model import ModelView, fields
 from trytond.pool import PoolMeta
 
 __all__ = ['SaleShop']
-__metaclass__ = PoolMeta
 
 
 class SaleShop:
+    __metaclass__ = PoolMeta
     __name__ = 'sale.shop'
     esale_last_products = fields.DateTime('Last Products',
         help='This date is last export (filter)')

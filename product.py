@@ -12,7 +12,6 @@ __all__ = ['Template', 'Product', 'EsaleAttributeGroup', 'EsaleExportStart',
     'EsaleExportResult', 'EsaleExportProduct', 'EsaleExportPrice',
     'EsaleExportImage', 'EsaleExportCSVStart', 'EsaleExportCSVResult',
     'EsaleExportCSV']
-__metaclass__ = PoolMeta
 
 
 class EsaleAttributeGroup(ModelSQL, ModelView):
@@ -28,6 +27,7 @@ class EsaleAttributeGroup(ModelSQL, ModelView):
 
 
 class Template:
+    __metaclass__ = PoolMeta
     __name__ = 'product.template'
     esale_attribute_group = fields.Many2One('esale.attribute.group',
         'eSale Attribute',
@@ -42,6 +42,7 @@ class Template:
 
 
 class Product:
+    __metaclass__ = PoolMeta
     __name__ = 'product.product'
 
     @classmethod

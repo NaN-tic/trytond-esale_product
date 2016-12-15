@@ -5,10 +5,10 @@ from trytond.model import fields
 from trytond.pool import PoolMeta
 
 __all__ = ['Configuration']
-__metaclass__ = PoolMeta
 
 
 class Configuration:
+    __metaclass__ = PoolMeta
     __name__ = 'product.configuration'
     esale_attribute_group = fields.Property(fields.Many2One('esale.attribute.group',
             'eSale Attribute Group'))
