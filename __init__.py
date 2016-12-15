@@ -11,12 +11,16 @@ def register():
         Configuration,
         EsaleAttributeGroup,
         Template,
+        Product,
         EsaleExportStart,
         EsaleExportResult,
+        EsaleExportCSVStart,
+        EsaleExportCSVResult,
         SaleShop,
         module='esale_product', type_='model')
     Pool.register(
         EsaleExportProduct,
         EsaleExportPrice,
         EsaleExportImage,
+        EsaleExportCSV,
         module='esale_product', type_='wizard')
