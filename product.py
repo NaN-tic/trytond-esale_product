@@ -48,9 +48,16 @@ class Product:
     @classmethod
     def esale_export_csv(cls, shop, lang, from_date=None, to_date=None):
         'eSale Export CSV'
-        # get domain from esale APP
-        product_domain = getattr(cls, '%s_product_domain' % shop.esale_shop_app)
-        domain = product_domain([shop.id])
+
+        # get domain from esale APP or new domain
+        if shop.esale_shop_app:
+            product_domain = getattr(cls, '%s_product_domain' % shop.esale_shop_app)
+            domain = product_domain([shop.id])
+        else:
+            domain = [
+                ('esale_available', '=', True),
+                ('code', '!=', None),
+                ]
 
         if from_date:
             domain += [['OR',
