@@ -87,7 +87,7 @@ class EsaleExportStart(ModelView):
     shops = fields.One2Many('sale.shop', None, 'Shops')
     shop = fields.Many2One('sale.shop', 'Shop', required=True,
         domain=[
-            ('id', 'in', Eval('shops'))
+            ('id', 'in', Eval('shops')),
         ], depends=['shops'],
         help='Select shop will be export this product.')
 
@@ -271,7 +271,7 @@ class EsaleExportCSVStart(ModelView):
     def default_shop():
         User = Pool().get('res.user')
         user = User(Transaction().user)
-        return user.shop.id if user.shop else None
+        return user.shop.id if (user.shop and user.shop.esale_available) else None
 
     @staticmethod
     def default_language():
