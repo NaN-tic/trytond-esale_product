@@ -7,6 +7,7 @@ from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.modules.product_esale.tools import slugify
+from simpleeval import simple_eval
 
 __all__ = ['Template', 'Product', 'EsaleAttributeGroup', 'EsaleExportStart',
     'EsaleExportResult', 'EsaleExportProduct', 'EsaleExportPrice',
@@ -302,9 +303,7 @@ class EsaleExportCSV(Wizard):
             ])
 
     def transition_export(self):
-        pool = Pool()
-        Date = pool.get('ir.date')
-        Product = pool.get('product.product')
+        Product = Pool().get('product.product')
 
         shop = self.start.shop
         lang = self.start.language.code
@@ -314,10 +313,15 @@ class EsaleExportCSV(Wizard):
         output = Product.esale_export_csv(shop, lang, from_date, to_date)
 
         self.result.csv_file = fields.Binary.cast(output.getvalue())
-        self.result.file_name = '%s-%s-%s.csv' % (
-            slugify(shop.name.replace('.', '-')),
-            lang.split('_')[0], # TODO 4.2 no split locale code
-            Date.today())
+        if shop.esale_export_product_filename:
+            context = shop.get_export_csv_context_formula(lang)
+            filename = simple_eval(shop.esale_export_product_filename, **context)
+        else:
+            filename = '%s-%s.csv' % (
+                slugify(shop.name.replace('.', '-')),
+                lang.split('_')[0], # TODO 4.2 no split locale code
+                )
+        self.result.file_name = filename
         return 'result'
 
     def default_result(self, fields):
