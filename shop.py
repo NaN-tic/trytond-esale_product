@@ -21,7 +21,7 @@ class SaleShop:
     esale_top_menu = fields.Many2One('esale.catalog.menu', 'Top Menu')
     esale_export_product_filename = fields.Char('eSale Export Product Filename',
         help='Python expression that will be evaluated to generate the filename.\n'
-            'If is empty, export the filename as <shopname>-stock.csv.')
+            'If is empty, export the filename as <shopname>-<lang>.csv.')
 
     @classmethod
     def __setup__(cls):
