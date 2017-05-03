@@ -102,10 +102,6 @@ msgctxt "field:esale.export.csv.start,shop:"
 msgid "Shop"
 msgstr "Tienda"
 
-msgctxt "field:esale.export.csv.start,to_date:"
-msgid "To Date"
-msgstr "Fecha final"
-
 msgctxt "field:esale.export.result,id:"
 msgid "ID"
 msgstr "ID"
