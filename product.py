@@ -47,7 +47,7 @@ class Product:
     __name__ = 'product.product'
 
     @classmethod
-    def esale_export_csv(cls, shop, lang, from_date=None, to_date=None):
+    def esale_export_csv(cls, shop, lang, from_date=None):
         'eSale Export CSV'
 
         # get domain from esale APP or new domain
@@ -59,7 +59,6 @@ class Product:
                 ('esale_available', '=', True),
                 ('code', '!=', None),
                 ]
-
         if from_date:
             domain += [['OR',
                         ('create_date', '>=', from_date),
@@ -67,14 +66,6 @@ class Product:
                         ('template.create_date', '>=', from_date),
                         ('template.write_date', '>=', from_date),
                     ]]
-        if to_date:
-            domain += [['OR',
-                        ('create_date', '<=', to_date),
-                        ('write_date', '<=', to_date),
-                        ('template.create_date', '<=', to_date),
-                        ('template.write_date', '<=', to_date),
-                    ]]
-
         products = cls.search(domain)
 
         export_csv = getattr(cls, 'esale_export_csv_%s' % shop.esale_shop_app)
@@ -264,9 +255,6 @@ class EsaleExportCSVStart(ModelView):
     from_date = fields.DateTime('From Date',
         help='Filter products create/write from this date. '
         'An empty value are all catalog product.')
-    to_date = fields.DateTime('To Date',
-        help='Filter products create/write to this date. '
-        'An empty value is today (now).')
 
     @staticmethod
     def default_shop():
@@ -308,9 +296,8 @@ class EsaleExportCSV(Wizard):
         shop = self.start.shop
         lang = self.start.language.code
         from_date = self.start.from_date
-        to_date = self.start.to_date
 
-        output = Product.esale_export_csv(shop, lang, from_date, to_date)
+        output = Product.esale_export_csv(shop, lang, from_date)
 
         self.result.csv_file = fields.Binary.cast(output.getvalue())
         if shop.esale_export_product_filename:

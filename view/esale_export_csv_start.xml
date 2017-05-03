@@ -20,7 +20,5 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         <field name="language" widget="selection"/>
         <label name="from_date"/>
         <field name="from_date"/>
-        <label name="to_date"/>
-        <field name="to_date"/>
     </group>
 </form>
