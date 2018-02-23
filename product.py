@@ -46,10 +46,8 @@ class Product:
     __metaclass__ = PoolMeta
     __name__ = 'product.product'
 
-    @classmethod
-    def esale_export_csv(cls, shop, lang, from_date=None):
-        'eSale Export CSV'
-
+    def esale_export_domain(cls, shop, from_date):
+        'eSale Export Domain'
         # get domain from esale APP or new domain
         if shop.esale_shop_app:
             product_domain = getattr(cls, '%s_product_domain' % shop.esale_shop_app)
@@ -66,6 +64,12 @@ class Product:
                         ('template.create_date', '>=', from_date),
                         ('template.write_date', '>=', from_date),
                     ]]
+        return domain
+
+    @classmethod
+    def esale_export_csv(cls, shop, lang, from_date=None):
+        'eSale Export CSV'
+        domain = cls.esale_export_domain(shop, from_date)
         products = cls.search(domain)
 
         export_csv = getattr(cls, 'esale_export_csv_%s' % shop.esale_shop_app)
