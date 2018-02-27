@@ -46,6 +46,7 @@ class Product:
     __metaclass__ = PoolMeta
     __name__ = 'product.product'
 
+    @classmethod
     def esale_export_domain(cls, shop, from_date):
         'eSale Export Domain'
         # get domain from esale APP or new domain
