@@ -7,4 +7,26 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         <field name="inherit" ref="sale_shop.sale_shop_view_form"/>
         <field name="name">sale_shop_form</field>
     </record>
+
+    <!-- buttons -->
+    <record model="ir.model.button" id="export_prices_button">
+        <field name="name">export_prices</field>
+        <field name="string">Export Prices</field>
+        <field name="model" search="[('model', '=', 'sale.shop')]"/>
+    </record>
+    <record model="ir.model.button" id="export_products_button">
+        <field name="name">export_prices</field>
+        <field name="string">Export Products</field>
+        <field name="model" search="[('model', '=', 'sale.shop')]"/>
+    </record>
+    <record model="ir.model.button" id="export_images_button">
+        <field name="name">export_images</field>
+        <field name="string">Export Images</field>
+        <field name="model" search="[('model', '=', 'sale.shop')]"/>
+    </record>
+    <record model="ir.model.button" id="export_menus_button">
+        <field name="name">export_menus</field>
+        <field name="string">Export Menus</field>
+        <field name="model" search="[('model', '=', 'sale.shop')]"/>
+    </record>
 </tryton>
