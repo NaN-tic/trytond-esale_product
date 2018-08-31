@@ -4,14 +4,13 @@
 from trytond.model import fields
 from trytond.pool import PoolMeta
 
-
 __all__ = ['Configuration']
 
 
 class Configuration:
     __metaclass__ = PoolMeta
     __name__ = 'product.configuration'
-    esale_attribute_group = fields.Property(fields.Many2One('esale.attribute.group',
-            'eSale Attribute Group'))
+    esale_attribute_group = fields.Many2One('esale.attribute.group',
+            'eSale Attribute Group')
     esale_media_uri = fields.Char('Media URI',
         help='eSale Media URI')
