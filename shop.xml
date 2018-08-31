@@ -16,7 +16,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="model" search="[('model', '=', 'sale.shop')]"/>
         </record>
         <record model="ir.model.button" id="export_products_button">
-            <field name="name">export_prices</field>
+            <field name="name">export_products</field>
             <field name="string">Export Products</field>
             <field name="model" search="[('model', '=', 'sale.shop')]"/>
         </record>
