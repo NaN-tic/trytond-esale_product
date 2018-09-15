@@ -2,25 +2,25 @@
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
 from trytond.pool import Pool
-from .configuration import *
-from .product import *
-from .shop import *
+from . import configuration
+from . import product
+from . import shop
 
 def register():
     Pool.register(
-        Configuration,
-        EsaleAttributeGroup,
-        Template,
-        Product,
-        EsaleExportStart,
-        EsaleExportResult,
-        EsaleExportCSVStart,
-        EsaleExportCSVResult,
-        SaleShop,
+        configuration.Configuration,
+        product.EsaleAttributeGroup,
+        product.Template,
+        product.Product,
+        product.EsaleExportStart,
+        product.EsaleExportResult,
+        product.EsaleExportCSVStart,
+        product.EsaleExportCSVResult,
+        shop.SaleShop,
         module='esale_product', type_='model')
     Pool.register(
-        EsaleExportProduct,
-        EsaleExportPrice,
-        EsaleExportImage,
-        EsaleExportCSV,
+        product.EsaleExportProduct,
+        product.EsaleExportPrice,
+        product.EsaleExportImage,
+        product.EsaleExportCSV,
         module='esale_product', type_='wizard')

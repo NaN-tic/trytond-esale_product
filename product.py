@@ -27,8 +27,7 @@ class EsaleAttributeGroup(ModelSQL, ModelView):
         return True
 
 
-class Template:
-    __metaclass__ = PoolMeta
+class Template(metaclass=PoolMeta):
     __name__ = 'product.template'
     esale_attribute_group = fields.Many2One('esale.attribute.group',
         'eSale Attribute',
@@ -42,8 +41,7 @@ class Template:
             if config.esale_attribute_group else None
 
 
-class Product:
-    __metaclass__ = PoolMeta
+class Product(metaclass=PoolMeta):
     __name__ = 'product.product'
 
     @classmethod

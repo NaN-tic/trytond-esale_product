@@ -7,8 +7,7 @@ from trytond.pool import PoolMeta
 __all__ = ['Configuration']
 
 
-class Configuration:
-    __metaclass__ = PoolMeta
+class Configuration(metaclass=PoolMeta):
     __name__ = 'product.configuration'
     esale_attribute_group = fields.Many2One('esale.attribute.group',
             'eSale Attribute Group')
