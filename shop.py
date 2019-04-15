@@ -3,6 +3,8 @@
 # the full copyright notices and license terms.
 from trytond.model import ModelView, fields
 from trytond.pool import PoolMeta
+from trytond.exceptions import UserError
+from trytond.i18n import gettext
 
 __all__ = ['SaleShop']
 
@@ -25,13 +27,6 @@ class SaleShop(metaclass=PoolMeta):
     @classmethod
     def __setup__(cls):
         super(SaleShop, cls).__setup__()
-        cls._error_messages.update({
-            'menu_not_export': 'Select a top menu in sale shop',
-            'select_date_products': 'Select a date to export products',
-            'select_date_prices': 'Select a date to export prices',
-            'select_date_images': 'Select a date to export images',
-            'select_date_menus': 'Select a date to export menus',
-        })
         cls._buttons.update({
                 'export_products': {},
                 'export_prices': {},
@@ -47,7 +42,7 @@ class SaleShop(metaclass=PoolMeta):
         """
         for shop in shops:
             if not shop.esale_last_products:
-                cls.raise_user_error('select_date_products')
+                raise UserError(gettext('select_date_products'))
             export_products = getattr(shop,
                 'export_products_%s' % shop.esale_shop_app)
             export_products()
@@ -60,7 +55,7 @@ class SaleShop(metaclass=PoolMeta):
         """
         for shop in shops:
             if not shop.esale_last_prices:
-                self.raise_user_error('select_date_prices')
+                raise UserError(gettext('select_date_prices'))
             export_prices = getattr(shop,
                 'export_prices_%s' % shop.esale_shop_app)
             export_prices()
@@ -73,7 +68,7 @@ class SaleShop(metaclass=PoolMeta):
         """
         for shop in shops:
             if not shop.esale_last_images:
-                self.raise_user_error('select_date_images')
+                raise UserError(gettext('select_date_images'))
             export_images = getattr(shop,
                 'export_images_%s' % shop.esale_shop_app)
             export_images()
@@ -86,9 +81,9 @@ class SaleShop(metaclass=PoolMeta):
         """
         for shop in shops:
             if not shop.esale_top_menu:
-                self.raise_user_error('menu_not_export')
+                raise UserError(gettext('menu_not_export'))
             if not shop.esale_last_menus:
-                self.raise_user_error('select_date_menus')
+                raise UserError(gettext('select_date_menus'))
             export_menus = getattr(shop,
                 'export_menus_%s' % shop.esale_shop_app)
             export_menus()

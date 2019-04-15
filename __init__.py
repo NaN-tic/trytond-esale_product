@@ -5,10 +5,12 @@ from trytond.pool import Pool
 from . import configuration
 from . import product
 from . import shop
+from . import esale
 
 def register():
     Pool.register(
         configuration.Configuration,
+        esale.Cron,
         product.EsaleAttributeGroup,
         product.Template,
         product.Product,

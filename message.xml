@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data group="1">
+      <record model="ir.message" id="menu_not_export">
+          <field name="text">Select a top menu in sale shop</field>
+      </record>
+      <record model="ir.message" id="select_date_products">
+          <field name="text">Select a date to export products</field>
+      </record>
+      <record model="ir.message" id="select_date_prices">
+          <field name="text">Select a date to export prices</field>
+      </record>
+      <record model="ir.message" id="select_date_images">
+          <field name="text">Select a date to export images</field>
+      </record>
+      <record model="ir.message" id="select_date_menus">
+          <field name="text">Select a date to export menus</field>
+      </record>
+      <record model="ir.message" id="export_info">
+          <field name="text">Export products %(prices)s IDs to %(shop)s shop</field>
+      </record>
+    </data>
+</tryton>

@@ -8,6 +8,8 @@ from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.modules.product_esale.tools import slugify
 from simpleeval import simple_eval
+from trytond.exceptions import UserError
+from trytond.i18n import gettext
 
 __all__ = ['Template', 'Product', 'EsaleAttributeGroup', 'EsaleExportStart',
     'EsaleExportResult', 'EsaleExportProduct', 'EsaleExportPrice',
@@ -111,9 +113,6 @@ class EsaleExportProduct(Wizard):
     @classmethod
     def __setup__(cls):
         super(EsaleExportProduct, cls).__setup__()
-        cls._error_messages.update({
-                'export_info': 'Export products %s IDs to %s shop',
-                })
 
     def default_start(self, fields):
         Template = Pool().get('product.template')
@@ -135,9 +134,13 @@ class EsaleExportProduct(Wizard):
         templates = Template.browse(Transaction().context['active_ids'])
         templates = [t.id for t in templates if shop in t.shops]
         export_status(templates)
-        self.result.info = self.raise_user_error('export_info',
-            (','.join(str(t) for t in templates), shop.rec_name),
-            raise_exception=False)
+        try:
+            raise UserError(gettext('export_info',
+                    prices=','.join(str(t) for t in templates),
+                    shop=shop.rec_name))
+        except UserError as e:
+            self.result.info = e
+
         return 'result'
 
     def default_result(self, fields):
@@ -162,13 +165,6 @@ class EsaleExportPrice(Wizard):
             Button('Close', 'end', 'tryton-close'),
             ])
 
-    @classmethod
-    def __setup__(cls):
-        super(EsaleExportPrice, cls).__setup__()
-        cls._error_messages.update({
-                'export_info': 'Export product prices %s IDs to %s shop',
-                })
-
     def default_start(self, fields):
         Template = Pool().get('product.template')
         templates = Template.browse(Transaction().context['active_ids'])
@@ -186,9 +182,13 @@ class EsaleExportPrice(Wizard):
         export_status = getattr(shop, 'export_prices_%s' % shop.esale_shop_app)
         templates = Transaction().context['active_ids']
         export_status(templates)
-        self.result.info = self.raise_user_error('export_info',
-                (','.join(str(t) for t in templates), shop.rec_name),
-                raise_exception=False)
+        try:
+            raise UserError(gettext('export_info',
+                    prices=','.join(str(t) for t in templates),
+                    shop=shop.rec_name))
+        except UserError as e:
+            self.result.info = e
+
         return 'result'
 
     def default_result(self, fields):
@@ -213,13 +213,6 @@ class EsaleExportImage(Wizard):
             Button('Close', 'end', 'tryton-close'),
             ])
 
-    @classmethod
-    def __setup__(cls):
-        super(EsaleExportImage, cls).__setup__()
-        cls._error_messages.update({
-                'export_info': 'Export product images %s IDs to %s shop',
-                })
-
     def default_start(self, fields):
         Template = Pool().get('product.template')
         templates = Template.browse(Transaction().context['active_ids'])
@@ -236,9 +229,13 @@ class EsaleExportImage(Wizard):
         export_status = getattr(shop, 'export_images_%s' % shop.esale_shop_app)
         templates = Transaction().context['active_ids']
         export_status(templates)
-        self.result.info = self.raise_user_error('export_info',
-                (','.join(str(t) for t in templates), shop.rec_name),
-                raise_exception=False)
+        try:
+            raise UserError(gettext('export_info',
+                    prices=','.join(str(t) for t in templates),
+                    shop=shop.rec_name))
+        except UserError as e:
+            self.result.info = e
+
         return 'result'
 
     def default_result(self, fields):
